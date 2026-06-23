@@ -1,0 +1,5 @@
+pywinauto
+pandas
+pdfplumber
+python-dotenv
+pywin32

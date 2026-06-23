@@ -1,0 +1,1489 @@
+2026-06-23 11:08:06,897 [INFO] ==================================================
+2026-06-23 11:08:06,897 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 11:08:06,897 [INFO] ==================================================
+2026-06-23 11:08:06,897 [INFO] --> A executar Passo 1: Login
+2026-06-23 11:08:06,897 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 11:08:06,898 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 11:08:06,898 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 11:08:15,052 [INFO] Data validada: 22062026. Iniciando o sistema...
+2026-06-23 11:08:15,053 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 11:08:17,973 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 11:08:23,667 [INFO] Tela de login detectada: 'Login'
+2026-06-23 11:08:23,668 [INFO] Injetando credenciais...
+2026-06-23 11:08:25,277 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 11:08:28,006 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 11:08:28,006 [INFO] O módulo de login devolveu a data: 22062026. Pronto para o Passo 2.
+2026-06-23 11:08:28,006 [INFO] ==================================================
+2026-06-23 11:08:28,006 [INFO] FIM DA EXECUÇÃO
+2026-06-23 11:08:28,006 [INFO] ==================================================
+2026-06-23 11:12:21,867 [INFO] ==================================================
+2026-06-23 11:12:21,867 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 11:12:21,867 [INFO] ==================================================
+2026-06-23 11:12:21,867 [INFO] --> A executar Passo 1: Login
+2026-06-23 11:12:21,867 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 11:12:21,868 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 11:12:21,868 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 11:12:28,813 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: Operação cancelada pelo usuário. O robô não será iniciado.
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 46, in main
+    data_alvo = iniciar.executar(USUARIO, SENHA, os.getenv("DOC_PATH"))
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m01_iniciar.py", line 124, in executar
+    data_alvo = obter_data_interface()
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m01_iniciar.py", line 114, in obter_data_interface
+    raise RuntimeError("Operação cancelada pelo usuário. O robô não será iniciado.")
+RuntimeError: Operação cancelada pelo usuário. O robô não será iniciado.
+2026-06-23 11:12:28,819 [INFO] ==================================================
+2026-06-23 11:12:28,820 [INFO] FIM DA EXECUÇÃO
+2026-06-23 11:12:28,820 [INFO] ==================================================
+2026-06-23 11:14:18,736 [INFO] ==================================================
+2026-06-23 11:14:18,736 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 11:14:18,736 [INFO] ==================================================
+2026-06-23 11:14:18,736 [INFO] --> A executar Passo 1: Login
+2026-06-23 11:14:18,736 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 11:14:18,736 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 11:14:18,737 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 11:14:24,487 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 11:14:24,487 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 11:14:27,587 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 11:14:32,861 [INFO] Tela de login detectada: 'Login'
+2026-06-23 11:14:32,861 [INFO] Injetando credenciais...
+2026-06-23 11:14:33,612 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 11:14:36,589 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 11:14:36,589 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 11:14:36,590 [INFO] ==================================================
+2026-06-23 11:14:36,590 [INFO] FIM DA EXECUÇÃO
+2026-06-23 11:14:36,590 [INFO] ==================================================
+2026-06-23 11:14:55,240 [INFO] ==================================================
+2026-06-23 11:14:55,240 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 11:14:55,240 [INFO] ==================================================
+2026-06-23 11:14:55,241 [INFO] --> A executar Passo 1: Login
+2026-06-23 11:14:55,241 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 11:14:55,241 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 11:14:55,241 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 11:15:06,862 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 11:15:06,862 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 11:15:09,563 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 11:15:14,823 [INFO] Tela de login detectada: 'Login'
+2026-06-23 11:15:14,823 [INFO] Injetando credenciais...
+2026-06-23 11:15:15,581 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 11:15:18,840 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 11:15:18,840 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 11:15:18,840 [INFO] ==================================================
+2026-06-23 11:15:18,840 [INFO] FIM DA EXECUÇÃO
+2026-06-23 11:15:18,840 [INFO] ==================================================
+2026-06-23 11:35:07,153 [INFO] ==================================================
+2026-06-23 11:35:07,154 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 11:35:07,154 [INFO] ==================================================
+2026-06-23 11:35:07,154 [INFO] --> A executar Passo 1: Login
+2026-06-23 11:35:07,154 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 11:35:07,154 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 11:35:07,154 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 11:35:14,004 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 11:35:14,004 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 11:35:18,942 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 11:35:24,217 [INFO] Tela de login detectada: 'Login'
+2026-06-23 11:35:24,218 [INFO] Injetando credenciais...
+2026-06-23 11:35:24,937 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 11:35:30,840 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 11:35:30,840 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 11:35:30,840 [INFO] --> A executar Passo 2: Emissão de Relatórios
+2026-06-23 11:35:30,841 [INFO] Conectando ao sistema para gerar relatórios (Data: 21062026)...
+2026-06-23 11:35:31,289 [INFO] --- INICIANDO GERAÇÃO: RELATÓRIO DE SELOS ---
+2026-06-23 11:35:32,495 [INFO] Navegando nos menus (Selo)...
+2026-06-23 11:35:36,011 [INFO] Preenchendo datas...
+2026-06-23 11:35:39,092 [INFO] Acionando botão Gerar...
+2026-06-23 11:35:40,007 [INFO] Aguardando carregamento do relatório...
+2026-06-23 11:35:45,371 [INFO] Iniciando rotina de impressão para o arquivo: SELO-21-06-2026.pdf
+2026-06-23 11:35:46,989 [INFO] Aguardando a janela de impressão do Windows...
+2026-06-23 11:36:02,155 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: timed out
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 51, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m03_relatorios.py", line 289, in executar
+    gerar_relatorio_selos(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m03_relatorios.py", line 137, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m03_relatorios.py", line 57, in imprimir_e_salvar_pdf
+    janela_impressao.wait('ready', timeout=15)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 529, in wait
+    wait_until(timeout, retry_interval,
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+               lambda: self.__check_all_conditions(check_method_names, retry_interval))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+2026-06-23 11:36:02,183 [INFO] ==================================================
+2026-06-23 11:36:02,183 [INFO] FIM DA EXECUÇÃO
+2026-06-23 11:36:02,183 [INFO] ==================================================
+2026-06-23 11:40:22,278 [INFO] ==================================================
+2026-06-23 11:40:22,278 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 11:40:22,278 [INFO] ==================================================
+2026-06-23 11:40:22,278 [INFO] --> Executando Passo 1: Login
+2026-06-23 11:40:22,278 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 11:40:22,279 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 11:40:22,279 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 11:40:28,660 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 11:40:28,660 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 11:40:31,516 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 11:40:36,803 [INFO] Tela de login detectada: 'Login'
+2026-06-23 11:40:36,804 [INFO] Injetando credenciais...
+2026-06-23 11:40:37,569 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 11:40:40,508 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 11:40:40,508 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 11:40:40,508 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 11:40:40,508 [INFO] Conectando ao sistema para gerar relatórios (Data: 21062026)...
+2026-06-23 11:40:40,926 [INFO] --- INICIANDO GERAÇÃO: RELATÓRIO DE SELOS ---
+2026-06-23 11:40:42,089 [INFO] Navegando nos menus (Selo)...
+2026-06-23 11:40:45,408 [INFO] Preenchendo datas...
+2026-06-23 11:40:48,457 [INFO] Acionando botão Gerar...
+2026-06-23 11:40:49,369 [INFO] Aguardando carregamento do relatório...
+2026-06-23 11:40:52,186 [INFO] Iniciando rotina de impressão para o arquivo: SELO-21-06-2026.pdf
+2026-06-23 11:40:53,740 [INFO] Aguardando a janela de impressão do Windows...
+2026-06-23 11:41:08,928 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: timed out
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 289, in executar
+    gerar_relatorio_selos(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 137, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 57, in imprimir_e_salvar_pdf
+    janela_impressao.wait('ready', timeout=15)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 529, in wait
+    wait_until(timeout, retry_interval,
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+               lambda: self.__check_all_conditions(check_method_names, retry_interval))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 375, in wait_until
+    raise err
+pywinauto.timings.TimeoutError: timed out
+2026-06-23 11:41:08,930 [INFO] ==================================================
+2026-06-23 11:41:08,930 [INFO] FIM DA EXECUÇÃO
+2026-06-23 11:41:08,930 [INFO] ==================================================
+2026-06-23 12:05:19,283 [INFO] ==================================================
+2026-06-23 12:05:19,283 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 12:05:19,283 [INFO] ==================================================
+2026-06-23 12:05:19,283 [INFO] --> Executando Passo 1: Login
+2026-06-23 12:05:19,283 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 12:05:19,284 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 12:05:19,284 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 12:05:26,415 [INFO] Data validada: 22062026. Iniciando o sistema...
+2026-06-23 12:05:26,416 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 12:05:29,688 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 12:05:35,130 [INFO] Tela de login detectada: 'Login'
+2026-06-23 12:05:35,130 [INFO] Injetando credenciais...
+2026-06-23 12:05:35,825 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 12:05:38,525 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 12:05:38,525 [INFO] O módulo de login devolveu a data: 22062026. Pronto para o Passo 2.
+2026-06-23 12:05:38,525 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 12:05:38,525 [INFO] Conectando ao sistema para gerar relatórios
+2026-06-23 12:05:38,931 [INFO] Iniciando relatório de selos
+2026-06-23 12:05:40,167 [INFO] Navegando nos menus
+2026-06-23 12:05:43,620 [INFO] Preenchendo datas
+2026-06-23 12:05:46,680 [INFO] Acionando botão Gerar
+2026-06-23 12:05:53,606 [INFO] Aguardando carregamento do relatório
+2026-06-23 12:05:55,427 [INFO] Imprimindo o arquivo: SELO-22-06-2026.pdf
+2026-06-23 12:05:55,933 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: module 'pywinauto.mouse' has no attribute 'get_cursor_pos'
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 291, in executar
+    gerar_relatorio_selos(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 140, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 48, in imprimir_e_salvar_pdf
+    pos_original = mouse.get_cursor_pos()
+                   ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pywinauto.mouse' has no attribute 'get_cursor_pos'
+2026-06-23 12:05:55,937 [INFO] ==================================================
+2026-06-23 12:05:55,937 [INFO] FIM DA EXECUÇÃO
+2026-06-23 12:05:55,937 [INFO] ==================================================
+2026-06-23 12:06:40,772 [INFO] ==================================================
+2026-06-23 12:06:40,772 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 12:06:40,772 [INFO] ==================================================
+2026-06-23 12:06:40,772 [INFO] --> Executando Passo 1: Login
+2026-06-23 12:06:40,772 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 12:06:40,773 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 12:06:40,773 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 12:06:48,240 [INFO] Data validada: 22062026. Iniciando o sistema...
+2026-06-23 12:06:48,241 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 12:06:51,138 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 12:06:56,876 [INFO] Tela de login detectada: 'Login'
+2026-06-23 12:06:56,876 [INFO] Injetando credenciais...
+2026-06-23 12:06:57,620 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 12:07:00,525 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 12:07:00,525 [INFO] O módulo de login devolveu a data: 22062026. Pronto para o Passo 2.
+2026-06-23 12:07:00,525 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 12:07:00,525 [INFO] Conectando ao sistema para gerar relatórios
+2026-06-23 12:07:01,055 [INFO] Iniciando relatório de selos
+2026-06-23 12:07:02,219 [INFO] Navegando nos menus
+2026-06-23 12:07:05,546 [INFO] Preenchendo datas
+2026-06-23 12:07:08,612 [INFO] Acionando botão Gerar
+2026-06-23 12:07:15,116 [INFO] Aguardando carregamento do relatório
+2026-06-23 12:07:16,490 [INFO] Imprimindo o arquivo: SELO-22-06-2026.pdf
+2026-06-23 12:07:16,999 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: module 'pywinauto.mouse' has no attribute 'get_cursor_pos'
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 291, in executar
+    gerar_relatorio_selos(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 140, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 48, in imprimir_e_salvar_pdf
+    pos_original = mouse.get_cursor_pos()
+                   ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'pywinauto.mouse' has no attribute 'get_cursor_pos'
+2026-06-23 12:07:17,001 [INFO] ==================================================
+2026-06-23 12:07:17,001 [INFO] FIM DA EXECUÇÃO
+2026-06-23 12:07:17,001 [INFO] ==================================================
+2026-06-23 12:12:11,829 [INFO] ==================================================
+2026-06-23 12:12:11,829 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 12:12:11,829 [INFO] ==================================================
+2026-06-23 12:12:11,829 [INFO] --> Executando Passo 1: Login
+2026-06-23 12:12:11,829 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 12:12:11,830 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 12:12:11,830 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 12:12:19,286 [INFO] Data validada: 22062022. Iniciando o sistema...
+2026-06-23 12:12:19,287 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 12:12:22,019 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 12:12:27,351 [INFO] Tela de login detectada: 'Login'
+2026-06-23 12:12:27,351 [INFO] Injetando credenciais...
+2026-06-23 12:12:28,068 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 12:12:31,087 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 12:12:31,087 [INFO] O módulo de login devolveu a data: 22062022. Pronto para o Passo 2.
+2026-06-23 12:12:31,087 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 12:12:31,087 [INFO] Conectando ao sistema para gerar relatórios
+2026-06-23 12:12:31,660 [INFO] Iniciando relatório de selos
+2026-06-23 12:12:32,872 [INFO] Navegando nos menus
+2026-06-23 12:12:36,528 [INFO] Preenchendo datas
+2026-06-23 12:12:39,720 [INFO] Acionando botão Gerar
+2026-06-23 12:12:47,389 [INFO] Aguardando carregamento do relatório
+2026-06-23 12:12:48,771 [INFO] Imprimindo o arquivo: SELO-22-06-2022.pdf
+2026-06-23 12:12:49,279 [INFO] Executando clique furtivo
+2026-06-23 12:12:50,410 [INFO] Aguardando janela de impressão
+2026-06-23 12:12:52,849 [INFO] Definindo a impressora
+2026-06-23 12:12:57,488 [INFO] Confirmando a impressão
+2026-06-23 12:12:59,082 [INFO] Aguardando janela de salvamento
+2026-06-23 12:13:03,084 [INFO] Injetando caminho da pasta
+2026-06-23 12:13:08,151 [INFO] Injetando nome do arquivo
+2026-06-23 12:13:10,332 [INFO] Arquivo 'SELO-22-06-2022.pdf' salvo
+2026-06-23 12:13:15,333 [INFO] Fechando relatório de selos
+2026-06-23 12:13:16,896 [INFO] Iniciando relatório financeiro
+2026-06-23 12:13:18,135 [INFO] Navegando nos menus
+2026-06-23 12:13:25,476 [INFO] Preenchendo datas
+2026-06-23 12:13:27,798 [INFO] Configurando filtros
+2026-06-23 12:14:06,095 [INFO] Aplicando filtro de atos
+2026-06-23 12:14:11,415 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'btnFiltro', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 4458086>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 291, in executar
+    gerar_relatorio_financeiro(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 223, in gerar_relatorio_financeiro
+    btn_filtro.invoke()
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'btnFiltro', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 4458086>, 'backend': 'uia'}
+2026-06-23 12:14:11,431 [INFO] ==================================================
+2026-06-23 12:14:11,431 [INFO] FIM DA EXECUÇÃO
+2026-06-23 12:14:11,431 [INFO] ==================================================
+2026-06-23 12:20:27,818 [INFO] ==================================================
+2026-06-23 12:20:27,818 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 12:20:27,818 [INFO] ==================================================
+2026-06-23 12:20:27,818 [INFO] --> Executando Passo 1: Login
+2026-06-23 12:20:27,818 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 12:20:27,819 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 12:20:27,819 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 12:20:32,576 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 12:20:32,576 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 12:20:35,642 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 12:20:41,290 [INFO] Tela de login detectada: 'Login'
+2026-06-23 12:20:41,290 [INFO] Injetando credenciais...
+2026-06-23 12:20:42,066 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 12:20:45,047 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 12:20:45,047 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 12:20:45,047 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 12:20:45,047 [INFO] Conectando ao sistema para gerar relatórios
+2026-06-23 12:20:45,489 [INFO] Iniciando relatório de selos
+2026-06-23 12:20:46,647 [INFO] Navegando nos menus
+2026-06-23 12:20:50,087 [INFO] Preenchendo datas
+2026-06-23 12:20:53,145 [INFO] Acionando botão Gerar
+2026-06-23 12:20:56,371 [INFO] Aguardando carregamento do relatório
+2026-06-23 12:20:57,672 [INFO] Imprimindo o arquivo: SELO-21-06-2026.pdf
+2026-06-23 12:20:58,178 [INFO] Executando clique furtivo
+2026-06-23 12:20:59,293 [INFO] Aguardando janela de impressão
+2026-06-23 12:21:01,578 [INFO] Definindo a impressora
+2026-06-23 12:21:06,206 [INFO] Confirmando a impressão
+2026-06-23 12:21:07,807 [INFO] Aguardando janela de salvamento
+2026-06-23 12:21:11,808 [INFO] Injetando caminho da pasta
+2026-06-23 12:21:16,879 [INFO] Injetando nome do arquivo
+2026-06-23 12:21:19,059 [INFO] Arquivo 'SELO-21-06-2026.pdf' salvo
+2026-06-23 12:21:24,059 [INFO] Fechando a tela de visualização do relatório
+2026-06-23 12:21:24,573 [INFO] Fechando a tela de parâmetros
+2026-06-23 12:21:25,574 [INFO] Iniciando relatório financeiro
+2026-06-23 12:21:32,157 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: No windows for that process could be found
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 316, in executar
+    gerar_relatorio_financeiro(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 184, in gerar_relatorio_financeiro
+    janela_principal = app.top_window()
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 1156, in top_window
+    raise RuntimeError("No windows for that process could be found")
+RuntimeError: No windows for that process could be found
+2026-06-23 12:21:32,161 [INFO] ==================================================
+2026-06-23 12:21:32,161 [INFO] FIM DA EXECUÇÃO
+2026-06-23 12:21:32,161 [INFO] ==================================================
+2026-06-23 12:23:48,282 [INFO] ==================================================
+2026-06-23 12:23:48,283 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 12:23:48,283 [INFO] ==================================================
+2026-06-23 12:23:48,283 [INFO] --> Executando Passo 1: Login
+2026-06-23 12:23:48,283 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 12:23:48,283 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 12:23:48,283 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 12:23:56,821 [INFO] Data validada: 22062026. Iniciando o sistema...
+2026-06-23 12:23:56,821 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 12:23:59,523 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 12:24:04,846 [INFO] Tela de login detectada: 'Login'
+2026-06-23 12:24:04,847 [INFO] Injetando credenciais...
+2026-06-23 12:24:05,592 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 12:24:08,467 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 12:24:08,468 [INFO] O módulo de login devolveu a data: 22062026. Pronto para o Passo 2.
+2026-06-23 12:24:08,468 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 12:24:08,468 [INFO] Conectando ao sistema para gerar relatórios
+2026-06-23 12:24:08,899 [INFO] Iniciando relatório de selos
+2026-06-23 12:24:10,141 [INFO] Navegando nos menus
+2026-06-23 12:24:13,466 [INFO] Preenchendo datas
+2026-06-23 12:24:16,535 [INFO] Acionando botão Gerar
+2026-06-23 12:24:22,774 [INFO] Aguardando carregamento do relatório
+2026-06-23 12:24:24,168 [INFO] Imprimindo o arquivo: SELO-22-06-2026.pdf
+2026-06-23 12:24:24,677 [INFO] Executando clique furtivo
+2026-06-23 12:24:25,893 [INFO] Aguardando janela de impressão
+2026-06-23 12:24:28,269 [INFO] Definindo a impressora
+2026-06-23 12:24:32,893 [INFO] Confirmando a impressão
+2026-06-23 12:24:34,499 [INFO] Aguardando janela de salvamento
+2026-06-23 12:24:38,501 [INFO] Injetando caminho da pasta
+2026-06-23 12:24:43,571 [INFO] Injetando nome do arquivo
+2026-06-23 12:24:45,751 [INFO] Arquivo 'SELO-22-06-2026.pdf' salvo
+2026-06-23 12:24:50,752 [INFO] Fechando a tela de visualização do relatório
+2026-06-23 12:24:52,040 [INFO] Fechando a tela de parâmetros
+2026-06-23 12:24:53,328 [INFO] Iniciando relatório financeiro
+2026-06-23 12:24:54,560 [INFO] Navegando nos menus
+2026-06-23 12:25:01,932 [INFO] Preenchendo datas
+2026-06-23 12:25:07,432 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'txtData1', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Imprimindo', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 6553868>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 310, in executar
+    gerar_relatorio_financeiro(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 207, in gerar_relatorio_financeiro
+    janela_relatorio.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'txtData1', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'Imprimindo', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 6553868>, 'backend': 'uia'}
+2026-06-23 12:25:07,438 [INFO] ==================================================
+2026-06-23 12:25:07,438 [INFO] FIM DA EXECUÇÃO
+2026-06-23 12:25:07,438 [INFO] ==================================================
+2026-06-23 12:34:06,709 [INFO] ==================================================
+2026-06-23 12:34:06,709 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 12:34:06,709 [INFO] ==================================================
+2026-06-23 12:34:06,710 [INFO] --> Executando Passo 1: Login
+2026-06-23 12:34:06,710 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 12:34:06,710 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 12:34:06,710 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 12:34:11,568 [INFO] Data validada: 23062026. Iniciando o sistema...
+2026-06-23 12:34:11,568 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 12:34:14,216 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 12:34:19,923 [INFO] Tela de login detectada: 'Login'
+2026-06-23 12:34:19,923 [INFO] Injetando credenciais...
+2026-06-23 12:34:20,656 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 12:34:23,611 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 12:34:23,611 [INFO] O módulo de login devolveu a data: 23062026. Pronto para o Passo 2.
+2026-06-23 12:34:23,611 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 12:34:23,611 [INFO] Conectando ao sistema para gerar relatórios
+2026-06-23 12:34:24,064 [INFO] Iniciando relatório de selos
+2026-06-23 12:34:25,218 [INFO] Navegando nos menus
+2026-06-23 12:34:28,577 [INFO] Preenchendo datas
+2026-06-23 12:34:31,630 [INFO] Acionando botão Gerar
+2026-06-23 12:34:36,818 [INFO] Aguardando carregamento do relatório
+2026-06-23 12:34:38,110 [INFO] Imprimindo o arquivo: SELO-23-06-2026.pdf
+2026-06-23 12:34:38,617 [INFO] Executando clique furtivo
+2026-06-23 12:34:39,727 [INFO] Aguardando janela de impressão
+2026-06-23 12:34:41,989 [INFO] Definindo a impressora
+2026-06-23 12:34:46,614 [INFO] Confirmando a impressão
+2026-06-23 12:34:48,208 [INFO] Aguardando a janela de salvamento do Windows...
+2026-06-23 12:35:33,236 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: A janela de salvamento falhou por timeout.
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH"))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 367, in executar
+    gerar_relatorio_selos(app, data_alvo, dia, mes, ano)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 224, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 149, in imprimir_e_salvar_pdf
+    raise RuntimeError("A janela de salvamento falhou por timeout.")
+RuntimeError: A janela de salvamento falhou por timeout.
+2026-06-23 12:35:33,240 [INFO] ==================================================
+2026-06-23 12:35:33,240 [INFO] FIM DA EXECUÇÃO
+2026-06-23 12:35:33,240 [INFO] ==================================================
+2026-06-23 13:57:08,192 [INFO] ==================================================
+2026-06-23 13:57:08,192 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 13:57:08,192 [INFO] ==================================================
+2026-06-23 13:57:08,192 [INFO] --> Executando Passo 1: Login
+2026-06-23 13:57:08,192 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 13:57:08,193 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 13:57:08,193 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 13:57:13,328 [INFO] Data validada: 23062026. Iniciando o sistema...
+2026-06-23 13:57:13,328 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 13:57:16,589 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 13:57:22,088 [INFO] Tela de login detectada: 'Login'
+2026-06-23 13:57:22,088 [INFO] Injetando credenciais...
+2026-06-23 13:57:22,781 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 13:57:25,719 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 13:57:25,720 [INFO] O módulo de login devolveu a data: 23062026. Pronto para o Passo 2.
+2026-06-23 13:57:25,720 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 13:57:58,334 [INFO] Fechando janelas
+2026-06-23 13:58:05,867 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: (-2147220991, 'Um evento não pôde chamar assinantes', (None, None, None, 0, None))
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 119, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 99, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data}")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 203, in __get_ctrl
+    dialog = self.backend.generic_wrapper_class(findwindows.find_element(**criteria[0]))
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 84, in find_element
+    elements = find_elements(**kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 181, in find_elements
+    return [backend_obj.element_info_class(handle), ]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\uia_element_info.py", line 71, in __init__
+    self._element = IUIA().iuia.ElementFromHandle(handle_or_elem)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+_ctypes.COMError: (-2147220991, 'Um evento não pôde chamar assinantes', (None, None, None, 0, None))
+2026-06-23 13:58:05,883 [INFO] ==================================================
+2026-06-23 13:58:05,883 [INFO] FIM DA EXECUÇÃO
+2026-06-23 13:58:05,883 [INFO] ==================================================
+2026-06-23 14:11:47,712 [INFO] ==================================================
+2026-06-23 14:11:47,712 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:11:47,713 [INFO] ==================================================
+2026-06-23 14:11:47,713 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:11:47,713 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:11:47,713 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:11:47,713 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:11:54,072 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 14:11:54,072 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:11:57,058 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:12:02,688 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:12:02,688 [INFO] Injetando credenciais...
+2026-06-23 14:12:03,344 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:12:06,588 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:12:06,588 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 14:12:06,588 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:12:55,441 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: A janela de salvamento não foi encontrada.
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 150, in executar
+    gerar_relatorio_selos(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 120, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(vis, f"SELO-{d}-{m}-{a}.pdf")
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 79, in imprimir_e_salvar_pdf
+    assert janela_salvar is not None, "A janela de salvamento não foi encontrada."
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: A janela de salvamento não foi encontrada.
+2026-06-23 14:12:55,443 [INFO] ==================================================
+2026-06-23 14:12:55,443 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:12:55,443 [INFO] ==================================================
+2026-06-23 14:20:56,907 [INFO] ==================================================
+2026-06-23 14:20:56,907 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:20:56,907 [INFO] ==================================================
+2026-06-23 14:20:56,907 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:20:56,907 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:20:56,907 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:20:56,907 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:21:08,363 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 14:21:08,363 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:21:11,568 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:21:16,982 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:21:16,983 [INFO] Injetando credenciais...
+2026-06-23 14:21:17,692 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:21:20,749 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:21:20,750 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 14:21:20,750 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:21:38,446 [INFO] Aguardando a janela 'Salvar Saída de Impressão como'...
+2026-06-23 14:22:16,943 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: Janela com título contendo 'salvar saída de impressão como' não encontrada.
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 163, in executar
+    gerar_relatorio_selos(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 133, in gerar_relatorio_selos
+    imprimir_e_salvar_pdf(vis, f"SELO-{d}-{m}-{a}.pdf")
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 90, in imprimir_e_salvar_pdf
+    assert janela_salvar is not None, f"Janela com título contendo '{titulo_alvo}' não encontrada."
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Janela com título contendo 'salvar saída de impressão como' não encontrada.
+2026-06-23 14:22:16,945 [INFO] ==================================================
+2026-06-23 14:22:16,945 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:22:16,945 [INFO] ==================================================
+2026-06-23 14:26:30,322 [INFO] ==================================================
+2026-06-23 14:26:30,322 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:26:30,322 [INFO] ==================================================
+2026-06-23 14:26:30,323 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:26:30,323 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:26:30,323 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:26:30,323 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:26:33,611 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 14:26:33,612 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:26:36,267 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:26:41,554 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:26:41,554 [INFO] Injetando credenciais...
+2026-06-23 14:26:42,270 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:26:45,488 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:26:45,489 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 14:26:45,489 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:27:15,881 [INFO] Fechando janelas
+2026-06-23 14:27:28,057 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'txtData1', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - '', , None>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 141, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 121, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data}")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'txtData1', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - '', , None>, 'backend': 'uia'}
+2026-06-23 14:27:28,064 [INFO] ==================================================
+2026-06-23 14:27:28,064 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:27:28,064 [INFO] ==================================================
+2026-06-23 14:34:29,137 [INFO] ==================================================
+2026-06-23 14:34:29,137 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:34:29,137 [INFO] ==================================================
+2026-06-23 14:34:29,137 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:34:29,137 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:34:29,137 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:34:29,137 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:34:34,015 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 14:34:34,015 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:34:37,045 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:34:42,580 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:34:42,580 [INFO] Injetando credenciais...
+2026-06-23 14:34:43,306 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:34:46,250 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:34:46,250 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 14:34:46,250 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:35:20,879 [INFO] Fechando janelas
+2026-06-23 14:35:30,021 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: No windows for that process could be found
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 148, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 123, in gerar_relatorio_financeiro
+    app.top_window().set_focus()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 1156, in top_window
+    raise RuntimeError("No windows for that process could be found")
+RuntimeError: No windows for that process could be found
+2026-06-23 14:35:30,023 [INFO] ==================================================
+2026-06-23 14:35:30,023 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:35:30,023 [INFO] ==================================================
+2026-06-23 14:40:35,970 [INFO] ==================================================
+2026-06-23 14:40:35,971 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:40:35,971 [INFO] ==================================================
+2026-06-23 14:40:35,971 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:40:35,971 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:40:35,972 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:40:35,973 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:40:42,225 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 14:40:42,226 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:40:45,473 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:40:50,895 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:40:50,895 [INFO] Injetando credenciais...
+2026-06-23 14:40:51,700 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:40:54,949 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:40:54,949 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 14:40:54,949 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:41:26,625 [INFO] Fechando janelas
+2026-06-23 14:42:39,440 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: (-2146233083, None, (None, None, None, 0, None))
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 148, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 131, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="btnFiltro", control_type="Button").invoke()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 513, in invoke
+    self.iface_invoke.Invoke()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+_ctypes.COMError: (-2146233083, None, (None, None, None, 0, None))
+2026-06-23 14:42:39,454 [INFO] ==================================================
+2026-06-23 14:42:39,454 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:42:39,454 [INFO] ==================================================
+2026-06-23 14:48:36,493 [INFO] ==================================================
+2026-06-23 14:48:36,493 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:48:36,493 [INFO] ==================================================
+2026-06-23 14:48:36,493 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:48:36,493 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:48:36,495 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:48:36,495 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:48:44,453 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 14:48:44,454 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:48:47,399 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:48:52,788 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:48:52,788 [INFO] Injetando credenciais...
+2026-06-23 14:48:53,513 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:48:56,637 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:48:56,637 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 14:48:56,637 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:49:28,376 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 14:49:41,155 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'btnFiltro', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 4260910>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 154, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 137, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="btnFiltro", control_type="Button").invoke()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'btnFiltro', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 4260910>, 'backend': 'uia'}
+2026-06-23 14:49:41,161 [INFO] ==================================================
+2026-06-23 14:49:41,161 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:49:41,161 [INFO] ==================================================
+2026-06-23 14:51:10,698 [INFO] ==================================================
+2026-06-23 14:51:10,698 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 14:51:10,698 [INFO] ==================================================
+2026-06-23 14:51:10,698 [INFO] --> Executando Passo 1: Login
+2026-06-23 14:51:10,698 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 14:51:10,701 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 14:51:10,701 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 14:51:14,157 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 14:51:14,158 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 14:51:17,481 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 14:51:23,145 [INFO] Tela de login detectada: 'Login'
+2026-06-23 14:51:23,146 [INFO] Injetando credenciais...
+2026-06-23 14:51:23,810 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 14:51:26,624 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 14:51:26,625 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 14:51:26,625 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 14:52:01,951 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 14:52:19,969 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'btnMarcar', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 9243456>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 154, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 139, in gerar_relatorio_financeiro
+    filtro.child_window(auto_id="btnMarcar", control_type="Button").invoke()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'btnMarcar', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 9243456>, 'backend': 'uia'}
+2026-06-23 14:52:19,974 [INFO] ==================================================
+2026-06-23 14:52:19,974 [INFO] FIM DA EXECUÇÃO
+2026-06-23 14:52:19,974 [INFO] ==================================================
+2026-06-23 15:25:41,906 [INFO] ==================================================
+2026-06-23 15:25:41,906 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 15:25:41,906 [INFO] ==================================================
+2026-06-23 15:25:41,906 [INFO] --> Executando Passo 1: Login
+2026-06-23 15:25:41,906 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 15:25:41,908 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 15:25:41,908 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 15:25:45,475 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 15:25:45,475 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 15:25:48,654 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 15:25:54,060 [INFO] Tela de login detectada: 'Login'
+2026-06-23 15:25:54,060 [INFO] Injetando credenciais...
+2026-06-23 15:25:54,861 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 15:25:58,227 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 15:25:58,227 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 15:25:58,227 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 15:26:05,610 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: 
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 234, in get_elem_interface
+    iface = cur_ptrn.QueryInterface(cls_name)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\comtypes\_post_coinit\unknwn.py", line 406, in QueryInterface
+    self.__com_QueryInterface(byref(iid), byref(p))  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+ValueError: NULL COM pointer access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 219, in executar
+    gerar_relatorio_selos(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 128, in gerar_relatorio_selos
+    if rdb_desc_ato.get_toggle_state() == 0:
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\controls\uia_controls.py", line 110, in get_toggle_state
+    return self.iface_toggle.CurrentToggleState
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 132, in __get__
+    value = self.fget(obj)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 238, in iface_toggle
+    return uia_defs.get_elem_interface(elem, "Toggle")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\uia_defines.py", line 236, in get_elem_interface
+    raise NoPatternInterfaceError()
+pywinauto.uia_defines.NoPatternInterfaceError
+2026-06-23 15:26:05,648 [INFO] ==================================================
+2026-06-23 15:26:05,648 [INFO] FIM DA EXECUÇÃO
+2026-06-23 15:26:05,648 [INFO] ==================================================
+2026-06-23 15:29:59,354 [INFO] ==================================================
+2026-06-23 15:29:59,354 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 15:29:59,354 [INFO] ==================================================
+2026-06-23 15:29:59,354 [INFO] --> Executando Passo 1: Login
+2026-06-23 15:29:59,354 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 15:29:59,355 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 15:29:59,355 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 15:30:03,073 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 15:30:03,074 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 15:30:06,026 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 15:30:11,687 [INFO] Tela de login detectada: 'Login'
+2026-06-23 15:30:11,687 [INFO] Injetando credenciais...
+2026-06-23 15:30:12,378 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 15:30:15,574 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 15:30:15,574 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 15:30:15,575 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 15:30:32,544 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': '1001', 'control_type': 'ComboBox', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 10685390>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 218, in executar
+    gerar_relatorio_selos(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 147, in gerar_relatorio_selos
+    cmb_todos.set_focus()
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': '1001', 'control_type': 'ComboBox', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 10685390>, 'backend': 'uia'}
+2026-06-23 15:30:32,548 [INFO] ==================================================
+2026-06-23 15:30:32,548 [INFO] FIM DA EXECUÇÃO
+2026-06-23 15:30:32,548 [INFO] ==================================================
+2026-06-23 15:36:31,984 [INFO] ==================================================
+2026-06-23 15:36:31,984 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 15:36:31,984 [INFO] ==================================================
+2026-06-23 15:36:31,984 [INFO] --> Executando Passo 1: Login
+2026-06-23 15:36:31,984 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 15:36:31,986 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 15:36:31,986 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 15:36:36,008 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 15:36:36,008 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 15:36:39,096 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 15:36:44,971 [INFO] Tela de login detectada: 'Login'
+2026-06-23 15:36:44,971 [INFO] Injetando credenciais...
+2026-06-23 15:36:45,691 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 15:36:49,094 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 15:36:49,094 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 15:36:49,094 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 15:37:28,000 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 15:37:48,881 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'btnMarcar', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 7931646>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 178, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 163, in gerar_relatorio_financeiro
+    filtro.child_window(auto_id="btnMarcar", control_type="Button").invoke()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'btnMarcar', 'control_type': 'Button', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 7931646>, 'backend': 'uia'}
+2026-06-23 15:37:48,890 [INFO] ==================================================
+2026-06-23 15:37:48,891 [INFO] FIM DA EXECUÇÃO
+2026-06-23 15:37:48,891 [INFO] ==================================================
+2026-06-23 15:41:37,006 [INFO] ==================================================
+2026-06-23 15:41:37,006 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 15:41:37,006 [INFO] ==================================================
+2026-06-23 15:41:37,006 [INFO] --> Executando Passo 1: Login
+2026-06-23 15:41:37,006 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 15:41:37,008 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 15:41:37,008 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 15:41:40,136 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 15:41:40,137 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 15:41:42,865 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 15:41:48,196 [INFO] Tela de login detectada: 'Login'
+2026-06-23 15:41:48,196 [INFO] Injetando credenciais...
+2026-06-23 15:41:48,928 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 15:41:52,127 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 15:41:52,127 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 15:41:52,127 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 15:42:27,341 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 15:42:37,972 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: {'auto_id': 'txtData1', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 23724176>, 'backend': 'uia'}
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 458, in wait_until_passes
+    raise err
+pywinauto.timings.TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 178, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 158, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data}")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 261, in __resolve_control
+    raise e.original_exception
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 222, in __get_ctrl
+    ctrl = self.backend.generic_wrapper_class(findwindows.find_element(**ctrl_criteria))
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 87, in find_element
+    raise ElementNotFoundError(kwargs)
+pywinauto.findwindows.ElementNotFoundError: {'auto_id': 'txtData1', 'control_type': 'Edit', 'top_level_only': False, 'parent': <uia_element_info.UIAElementInfo - 'DOC-Windows | Versão 2017 release 4.88.7', WindowsForms10.Window.8.app.0.1f550a4_r10_ad1, 23724176>, 'backend': 'uia'}
+2026-06-23 15:42:37,977 [INFO] ==================================================
+2026-06-23 15:42:37,977 [INFO] FIM DA EXECUÇÃO
+2026-06-23 15:42:37,977 [INFO] ==================================================
+2026-06-23 15:48:54,098 [INFO] ==================================================
+2026-06-23 15:48:54,098 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 15:48:54,098 [INFO] ==================================================
+2026-06-23 15:48:54,098 [INFO] --> Executando Passo 1: Login
+2026-06-23 15:48:54,098 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 15:48:54,100 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 15:48:54,100 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 15:48:57,072 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 15:48:57,072 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 15:49:00,409 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 15:49:06,038 [INFO] Tela de login detectada: 'Login'
+2026-06-23 15:49:06,039 [INFO] Injetando credenciais...
+2026-06-23 15:49:06,761 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 15:49:09,661 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 15:49:09,661 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 15:49:09,661 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 15:49:45,316 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 15:49:54,172 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: (-2147220991, 'Um evento não pôde chamar assinantes', (None, None, None, 0, None))
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 53, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 185, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 166, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data}")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 379, in __getattribute__
+    ctrls = self.__resolve_control(self.criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 250, in __resolve_control
+    ctrl = wait_until_passes(
+        timeout,
+    ...<5 lines>...
+         controls.InvalidElement),
+        criteria)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\timings.py", line 436, in wait_until_passes
+    func_val = func(*args, **kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 203, in __get_ctrl
+    dialog = self.backend.generic_wrapper_class(findwindows.find_element(**criteria[0]))
+                                                ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 84, in find_element
+    elements = find_elements(**kwargs)
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\findwindows.py", line 181, in find_elements
+    return [backend_obj.element_info_class(handle), ]
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\uia_element_info.py", line 71, in __init__
+    self._element = IUIA().iuia.ElementFromHandle(handle_or_elem)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+_ctypes.COMError: (-2147220991, 'Um evento não pôde chamar assinantes', (None, None, None, 0, None))
+2026-06-23 15:49:54,177 [INFO] ==================================================
+2026-06-23 15:49:54,177 [INFO] FIM DA EXECUÇÃO
+2026-06-23 15:49:54,177 [INFO] ==================================================
+2026-06-23 15:59:27,556 [INFO] ==================================================
+2026-06-23 15:59:27,556 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 15:59:27,556 [INFO] ==================================================
+2026-06-23 15:59:27,556 [INFO] --> Executando Passo 1: Login
+2026-06-23 15:59:27,556 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 15:59:27,561 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 15:59:27,562 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 15:59:32,499 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 15:59:32,499 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 15:59:35,613 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 15:59:41,235 [INFO] Tela de login detectada: 'Login'
+2026-06-23 15:59:41,236 [INFO] Injetando credenciais...
+2026-06-23 15:59:41,944 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 15:59:44,802 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 15:59:44,803 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 15:59:44,803 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:00:05,942 [INFO] ==================================================
+2026-06-23 16:00:05,942 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:00:05,943 [INFO] ==================================================
+2026-06-23 16:00:30,266 [INFO] ==================================================
+2026-06-23 16:00:30,266 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:00:30,266 [INFO] ==================================================
+2026-06-23 16:00:30,266 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:00:30,266 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:00:30,266 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:00:30,266 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:00:33,680 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:00:33,680 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:00:36,334 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:00:41,917 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:00:41,917 [INFO] Injetando credenciais...
+2026-06-23 16:00:42,592 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:00:45,427 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:00:45,427 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:00:45,427 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:01:05,349 [INFO] ==================================================
+2026-06-23 16:01:05,349 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:01:05,350 [INFO] ==================================================
+2026-06-23 16:01:19,927 [INFO] ==================================================
+2026-06-23 16:01:19,927 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:01:19,927 [INFO] ==================================================
+2026-06-23 16:01:19,927 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:01:19,927 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:01:19,927 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:01:19,927 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:01:23,395 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:01:23,395 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:01:26,055 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:01:31,320 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:01:31,320 [INFO] Injetando credenciais...
+2026-06-23 16:01:32,057 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:01:34,824 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:01:34,824 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:01:34,824 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:01:49,078 [INFO] ==================================================
+2026-06-23 16:01:49,078 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:01:49,078 [INFO] ==================================================
+2026-06-23 16:04:06,532 [INFO] ==================================================
+2026-06-23 16:04:06,532 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:04:06,532 [INFO] ==================================================
+2026-06-23 16:04:06,533 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:04:06,533 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:04:06,533 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:04:06,533 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:04:09,474 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:04:09,474 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:04:12,092 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:04:17,583 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:04:17,583 [INFO] Injetando credenciais...
+2026-06-23 16:04:19,041 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:04:22,252 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:04:22,252 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:04:22,252 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:04:40,994 [INFO] ==================================================
+2026-06-23 16:04:40,994 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:04:40,994 [INFO] ==================================================
+2026-06-23 16:05:42,473 [INFO] ==================================================
+2026-06-23 16:05:42,473 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:05:42,473 [INFO] ==================================================
+2026-06-23 16:05:42,473 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:05:42,473 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:05:42,473 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:05:42,473 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:05:45,522 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:05:45,522 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:05:48,426 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:05:53,954 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:05:53,954 [INFO] Injetando credenciais...
+2026-06-23 16:05:54,642 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:05:57,303 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:05:57,303 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:05:57,303 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:06:33,622 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 16:06:38,136 [INFO] ==================================================
+2026-06-23 16:06:38,136 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:06:38,136 [INFO] ==================================================
+2026-06-23 16:06:50,728 [INFO] ==================================================
+2026-06-23 16:06:50,728 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:06:50,729 [INFO] ==================================================
+2026-06-23 16:06:50,729 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:06:50,729 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:06:50,734 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:06:50,734 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:06:54,140 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:06:54,141 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:06:56,880 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:07:02,226 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:07:02,226 [INFO] Injetando credenciais...
+2026-06-23 16:07:03,028 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:07:06,074 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:07:06,075 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:07:06,075 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:07:24,570 [INFO] ==================================================
+2026-06-23 16:07:24,570 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:07:24,570 [INFO] ==================================================
+2026-06-23 16:10:26,518 [INFO] ==================================================
+2026-06-23 16:10:26,518 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:10:26,518 [INFO] ==================================================
+2026-06-23 16:10:26,518 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:10:26,518 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:10:26,518 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:10:26,519 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:10:30,564 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:10:30,564 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:10:33,235 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:10:38,530 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:10:38,530 [INFO] Injetando credenciais...
+2026-06-23 16:10:39,333 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:10:42,141 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:10:42,141 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:10:42,141 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:10:50,586 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: Neither GUI element (wrapper) nor wrapper method 'is_checked' were found (typo?)
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 54, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 188, in executar
+    gerar_relatorio_selos(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 138, in gerar_relatorio_selos
+    if not chk_enquadramento.is_checked():
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\application.py", line 180, in __call__
+    raise AttributeError("Neither GUI element (wrapper) " \
+        "nor wrapper method '{0}' were found (typo?)".
+        format(self.criteria[-1]['best_match']))
+AttributeError: Neither GUI element (wrapper) nor wrapper method 'is_checked' were found (typo?)
+2026-06-23 16:10:50,588 [INFO] ==================================================
+2026-06-23 16:10:50,588 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:10:50,588 [INFO] ==================================================
+2026-06-23 16:13:05,479 [INFO] ==================================================
+2026-06-23 16:13:05,479 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:13:05,479 [INFO] ==================================================
+2026-06-23 16:13:05,479 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:13:05,479 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:13:05,480 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:13:05,480 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:13:08,874 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:13:08,875 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:13:11,639 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:13:16,979 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:13:16,979 [INFO] Injetando credenciais...
+2026-06-23 16:13:17,727 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:13:20,701 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:13:20,701 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:13:20,701 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:13:37,710 [INFO] ==================================================
+2026-06-23 16:13:37,710 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:13:37,710 [INFO] ==================================================
+2026-06-23 16:14:09,309 [INFO] ==================================================
+2026-06-23 16:14:09,309 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:14:09,309 [INFO] ==================================================
+2026-06-23 16:14:09,310 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:14:09,310 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:14:09,310 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:14:09,310 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:14:19,279 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:14:19,279 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:14:22,454 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:14:28,010 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:14:28,010 [INFO] Injetando credenciais...
+2026-06-23 16:14:28,734 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:14:31,816 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:14:31,816 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:14:31,816 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:14:45,549 [INFO] ==================================================
+2026-06-23 16:14:45,549 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:14:45,549 [INFO] ==================================================
+2026-06-23 16:17:54,148 [INFO] ==================================================
+2026-06-23 16:17:54,148 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:17:54,148 [INFO] ==================================================
+2026-06-23 16:17:54,148 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:17:54,148 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:17:54,149 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:17:54,149 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:17:57,937 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 16:17:57,937 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:18:01,045 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:18:06,581 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:18:06,581 [INFO] Injetando credenciais...
+2026-06-23 16:18:07,373 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:18:10,374 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:18:10,374 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 16:18:10,374 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:18:49,641 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 16:20:06,269 [CRITICAL] ERRO FATAL NA AUTOMAÇÃO: (-2146233083, None, (None, None, None, 0, None))
+Traceback (most recent call last):
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\main.py", line 54, in main
+    relatorios.executar(data_alvo, os.getenv("DOC_PATH") or "")
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 192, in executar
+    gerar_relatorio_financeiro(app, data_alvo, d, m, a)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\modulos\m02_relatorios.py", line 175, in gerar_relatorio_financeiro
+    rel.child_window(auto_id="btnFiltro", control_type="Button").invoke()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hilton\Desktop\Python\Automacao_Transmissao\.venv\Lib\site-packages\pywinauto\controls\uiawrapper.py", line 513, in invoke
+    self.iface_invoke.Invoke()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+_ctypes.COMError: (-2146233083, None, (None, None, None, 0, None))
+2026-06-23 16:20:06,272 [INFO] ==================================================
+2026-06-23 16:20:06,272 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:20:06,272 [INFO] ==================================================
+2026-06-23 16:25:33,100 [INFO] ==================================================
+2026-06-23 16:25:33,100 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:25:33,100 [INFO] ==================================================
+2026-06-23 16:25:33,100 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:25:33,100 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:25:33,102 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:25:33,102 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:25:38,352 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 16:25:38,353 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:25:41,062 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:25:46,378 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:25:46,378 [INFO] Injetando credenciais...
+2026-06-23 16:25:47,192 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:25:50,000 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:25:50,001 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 16:25:50,001 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:26:26,597 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 16:26:33,369 [INFO] ==================================================
+2026-06-23 16:26:33,369 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:26:33,370 [INFO] ==================================================
+2026-06-23 16:26:53,261 [INFO] ==================================================
+2026-06-23 16:26:53,261 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:26:53,261 [INFO] ==================================================
+2026-06-23 16:26:53,261 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:26:53,261 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:26:53,267 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:26:53,267 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:26:56,746 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:26:56,747 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:26:59,575 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:27:04,921 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:27:04,921 [INFO] Injetando credenciais...
+2026-06-23 16:27:05,746 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:27:08,826 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:27:08,827 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:27:08,827 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:27:43,845 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 16:27:47,546 [INFO] ==================================================
+2026-06-23 16:27:47,546 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:27:47,546 [INFO] ==================================================
+2026-06-23 16:35:38,335 [INFO] ==================================================
+2026-06-23 16:35:38,335 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:35:38,335 [INFO] ==================================================
+2026-06-23 16:35:38,335 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:35:38,335 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:35:38,335 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:35:38,335 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:35:42,287 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:35:42,287 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:35:45,409 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:35:50,766 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:35:50,766 [INFO] Injetando credenciais...
+2026-06-23 16:35:51,569 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:35:54,584 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:35:54,585 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:35:54,585 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:36:25,424 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 16:36:29,268 [INFO] ==================================================
+2026-06-23 16:36:29,268 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:36:29,268 [INFO] ==================================================
+2026-06-23 16:36:40,644 [INFO] ==================================================
+2026-06-23 16:36:40,644 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:36:40,644 [INFO] ==================================================
+2026-06-23 16:36:40,644 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:36:40,644 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:36:40,649 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:36:40,649 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:36:43,786 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:36:43,787 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:36:46,396 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:36:51,768 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:36:51,768 [INFO] Injetando credenciais...
+2026-06-23 16:36:52,602 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:36:55,548 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:36:55,548 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:36:55,548 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:37:27,113 [INFO] Fechando janelas com 1 tentativas de ESC
+2026-06-23 16:37:27,304 [INFO] ==================================================
+2026-06-23 16:37:27,304 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:37:27,304 [INFO] ==================================================
+2026-06-23 16:37:42,157 [INFO] ==================================================
+2026-06-23 16:37:42,157 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:37:42,157 [INFO] ==================================================
+2026-06-23 16:37:42,157 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:37:42,157 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:37:42,157 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:37:42,157 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:37:48,386 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:37:48,386 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:37:51,046 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:37:56,584 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:37:56,585 [INFO] Injetando credenciais...
+2026-06-23 16:37:57,312 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:38:00,367 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:38:00,367 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:38:00,367 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:38:25,011 [INFO] ==================================================
+2026-06-23 16:38:25,011 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:38:25,011 [INFO] ==================================================
+2026-06-23 16:40:49,220 [INFO] ==================================================
+2026-06-23 16:40:49,221 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:40:49,221 [INFO] ==================================================
+2026-06-23 16:40:49,221 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:40:49,221 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:40:49,221 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:40:49,221 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:40:55,792 [INFO] Data validada: 21012026. Iniciando o sistema...
+2026-06-23 16:40:55,792 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:40:58,781 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:41:04,167 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:41:04,167 [INFO] Injetando credenciais...
+2026-06-23 16:41:04,889 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:41:07,832 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:41:07,832 [INFO] O módulo de login devolveu a data: 21012026. Pronto para o Passo 2.
+2026-06-23 16:41:07,832 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:41:36,659 [INFO] ==================================================
+2026-06-23 16:41:36,659 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:41:36,659 [INFO] ==================================================
+2026-06-23 16:42:05,857 [INFO] ==================================================
+2026-06-23 16:42:05,857 [INFO] INÍCIO DA AUTOMAÇÃO TJRJ
+2026-06-23 16:42:05,857 [INFO] ==================================================
+2026-06-23 16:42:05,857 [INFO] --> Executando Passo 1: Login
+2026-06-23 16:42:05,857 [INFO] Preparando o ambiente: Limpando a pasta 'tmp'...
+2026-06-23 16:42:05,858 [INFO] Pasta 'tmp' limpa perfeitamente!
+2026-06-23 16:42:05,858 [INFO] Aguardando inserção de data pelo usuário na interface...
+2026-06-23 16:42:10,335 [INFO] Data validada: 21062026. Iniciando o sistema...
+2026-06-23 16:42:10,335 [INFO] Abrindo o aplicativo DOC-Windows...
+2026-06-23 16:42:13,032 [INFO] Tela inicial detectada: 'Splash'. Aguardando o carregamento...
+2026-06-23 16:42:18,347 [INFO] Tela de login detectada: 'Login'
+2026-06-23 16:42:18,348 [INFO] Injetando credenciais...
+2026-06-23 16:42:19,090 [INFO] Aguardando a tela principal do sistema carregar...
+2026-06-23 16:42:22,138 [INFO] Tela principal detectada: 'DOC-Windows | Versão 2017 release 4.88.7'
+2026-06-23 16:42:22,138 [INFO] O módulo de login devolveu a data: 21062026. Pronto para o Passo 2.
+2026-06-23 16:42:22,138 [INFO] --> Executando Passo 2: Emissão de Relatórios
+2026-06-23 16:42:44,874 [INFO] ==================================================
+2026-06-23 16:42:44,874 [INFO] FIM DA EXECUÇÃO
+2026-06-23 16:42:44,874 [INFO] ==================================================
