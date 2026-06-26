@@ -10,6 +10,7 @@ from pywinauto import Desktop
 from pywinauto.keyboard import send_keys
 from pywinauto import mouse
 from pywinauto.findwindows import ElementNotFoundError
+from pywinauto.uia_defines import NoPatternInterfaceError
 
 BTN_IMPRIMIR = "Pr" + "int"
 
@@ -149,23 +150,130 @@ def gerar_relatorio_selos(app: Application, data_alvo: str, dia: str, mes: str, 
     imprimir_e_salvar_pdf(janela_visualizacao, f"SELO-{dia}-{mes}-{ano}.pdf")
     fechar_janelas_em_cadeia(app)
 
+
+# noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
 def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: str) -> None:
     """Relatório Financeiro."""
     app.top_window().set_focus()
     send_keys('{VK_MENU}{RIGHT 7}{DOWN 3}{RIGHT}{DOWN 20}{ENTER}')
     time.sleep(2)
 
-    rel = app.top_window()
-    rel.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data}")
-    rel.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data}")
+    # CORREÇÃO: Unificação do nome da variável para janela_relatorio
+    janela_relatorio = app.top_window()
+    janela_relatorio.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data}")
+    janela_relatorio.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data}")
 
-    rel.child_window(auto_id="btnFiltro", control_type="Button").invoke()
-    filtro = app.top_window()
-    filtro.child_window(auto_id="btnMarcar", control_type="Button").invoke()
-    filtro.child_window(auto_id="btFechar", control_type="Button").invoke()
+    # ==========================================
+    # --- CHECKBOXES ---
+    # ==========================================
+    print("Configurando os CheckBoxes via teclado rápido...")
 
-    rel.child_window(auto_id="btnGerar", control_type="Button").invoke()
+    checkboxes_marcar = [
+        "chkEnquadramento", "chkIncluirRepasse", "chkExibirSelo",
+        "chkImprimirEncargos", "chkTodasCobrancas", "chkTodasContas"
+    ]
+    checkboxes_desmarcar = ["chkAgrupaData"]
 
+    # Marcação Instantânea
+    for id_chk in checkboxes_marcar:
+        try:
+            caixa = janela_relatorio.child_window(auto_id=id_chk, control_type="CheckBox")
+            if caixa.get_toggle_state() == 0:
+                caixa.set_focus()
+                send_keys('{SPACE}')
+        except (ElementNotFoundError, RuntimeError, NoPatternInterfaceError):
+            pass
+
+    # Desmarcação Instantânea
+    for id_chk in checkboxes_desmarcar:
+        try:
+            caixa = janela_relatorio.child_window(auto_id=id_chk, control_type="CheckBox")
+            if caixa.get_toggle_state() == 1:
+                caixa.set_focus()
+                send_keys('{SPACE}')
+        except (ElementNotFoundError, RuntimeError, NoPatternInterfaceError):
+            pass
+
+    # ==========================================
+    # --- RADIO BUTTONS ---
+    # ==========================================
+    print("Selecionando o formato Analítico...")
+    try:
+        rdb_analitico = janela_relatorio.child_window(auto_id="rdbAnalitico", control_type="RadioButton")
+        rdb_analitico.set_focus()
+        send_keys('{SPACE}')
+        time.sleep(0.2)
+    except (ElementNotFoundError, RuntimeError):
+        pass
+
+    print("\nFiltros configurados com sucesso!")
+
+    # ==========================================
+    # FILTRO DE ATOS (Bypass de Tabela Virtualizada)
+    # ==========================================
+    print("\nAbrindo a janela de Filtro de Atos...")
+    btn_filtro = janela_relatorio.child_window(auto_id="btnFiltro", control_type="Button")
+    btn_filtro.click_input()
+    time.sleep(1)
+
+    janela_filtro = app.top_window()
+    print("Marcando todos os itens...")
+    btn_marcar_todos = janela_filtro.child_window(auto_id="btnMarcar", control_type="Button")
+    btn_marcar_todos.click_input()
+    time.sleep(0.5)
+
+    print("Desmarcando os atos específicos via teclado...")
+
+    indices_para_desmarcar = [
+        0, 2, 3, 4, 26, 38, 39, 61, 62, 63, 64, 65, 66, 67, 68, 69,
+        70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
+        85, 86, 87, 88, 89, 90, 91, 92
+    ]
+
+    try:
+        linha_zero = janela_filtro.child_window(title=" Linha 0", control_type="DataItem")
+        linha_zero.set_focus()
+        time.sleep(0.5)
+
+        if 0 in indices_para_desmarcar:
+            send_keys('{SPACE}')
+            time.sleep(0.1)
+
+        for linha_atual in range(1, 93):
+            send_keys('{DOWN}')
+            time.sleep(0.05)
+
+            if linha_atual in indices_para_desmarcar:
+                send_keys('{SPACE}')
+                time.sleep(0.05)
+
+    except (ElementNotFoundError, RuntimeError) as e:
+        print(f"Erro ao navegar na tabela. Detalhe: {e}")
+
+    time.sleep(0.5)
+    print("Fechando a janela de filtro...")
+    btn_fechar = janela_filtro.child_window(auto_id="btFechar", control_type="Button")
+    btn_fechar.click_input()
+    time.sleep(1)
+
+    # ==========================================
+    # GERAR RELATÓRIO
+    # ==========================================
+    print("Gerando o relatório...")
+
+    # Atribui a variável fora do try para garantir que ela exista
+    btn_gerar = janela_relatorio.child_window(auto_id="btnGerar", control_type="Button")
+
+    try:
+        btn_gerar.set_focus()
+        send_keys('{ENTER}')
+    except (ElementNotFoundError, RuntimeError):
+        # Fallback caso o send_keys falhe
+        btn_gerar.click_input()
+
+    # ==========================================
+    # FINALIZAÇÃO
+    # ==========================================
     vis = aguardar_carregamento_relatorio(app)
     imprimir_e_salvar_pdf(vis, f"Atos-{d}-{m}-{a}.pdf")
     fechar_janelas_em_cadeia(app)
