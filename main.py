@@ -9,9 +9,9 @@ import win32api
 import win32con
 
 # noinspection SpellCheckingInspection
-import modulos.m01_iniciar as iniciar
+import modulos.iniciar as iniciar
 # noinspection SpellCheckingInspection
-import modulos.m02_relatorios as relatorios
+import modulos.relatorios as relatorios
 
 # ==========================================
 # 1. Configuração do sistema de logs
