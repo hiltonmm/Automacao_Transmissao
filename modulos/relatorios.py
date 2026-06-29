@@ -123,32 +123,54 @@ def imprimir_e_salvar_pdf(janela: Any, nome_arquivo: str) -> None:
 # ==========================================
 # ROTINA DE RELATÓRIO
 # ==========================================
-# noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
-def gerar_relatorio_selos(app: Application, data_alvo: str, dia: str, mes: str, ano: str) -> None:
-    """Gera o relatório de selos forçando os estados dos filtros via teclado."""
+
+# ==========================================
+# FUNÇÃO BASE DE RELATÓRIOS (Resolve a Duplicação)
+# ==========================================
+def _gerar_relatorio_generico(app: Application, data_alvo: str, atalho_teclado: str, nome_arquivo: str) -> None:
+    """Função mestre que navega, preenche datas e salva qualquer relatório padronizado."""
     app.top_window().set_focus()
 
-    # Navegação inicial nos menus
-    send_keys('{VK_MENU}{RIGHT 5}{DOWN 5}{RIGHT}{DOWN 5}{ENTER}')
+    # 1. Navegação inicial nos menus
+    send_keys(atalho_teclado)
     time.sleep(2)
 
     janela_relatorio = app.top_window()
 
-    # Preenchimento de datas
+    # 2. Preenchimento de datas
     janela_relatorio.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
     janela_relatorio.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
 
-    # Gerar Relatório
-    # O foco já está na área de filtros, navegamos até o botão Gerar
-    # Se o botão não estiver acessível via TABs, use o auto_id
+    # 3. Gerar Relatório
     btn_gerar = janela_relatorio.child_window(auto_id="btnGerar", control_type="Button")
     btn_gerar.set_focus()
     send_keys('{ENTER}')
 
-    # Finalização
+    # 4. Finalização
     janela_visualizacao = aguardar_carregamento_relatorio(app)
-    imprimir_e_salvar_pdf(janela_visualizacao, f"SELO-{dia}-{mes}-{ano}.pdf")
+    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
     fechar_janelas_em_cadeia(app)
+
+# ==========================================
+# FUNÇÕES ESPECÍFICAS (Agora limpas e sem avisos)
+# ==========================================
+def gerar_relatorio_selos(app: Application, data_alvo: str, dia: str, mes: str, ano: str) -> None:
+    """Gera o relatório de selos utilizando a função mestre."""
+    _gerar_relatorio_generico(
+        app,
+        data_alvo,
+        atalho_teclado='{VK_MENU}{RIGHT 5}{DOWN 5}{RIGHT}{DOWN 5}{ENTER}',
+        nome_arquivo=f"SELO-{dia}-{mes}-{ano}.pdf"
+    )
+
+def gerar_relatorio_caixa(app: Application, data_alvo: str, dia: str, mes: str, ano: str) -> None:
+    """Gera o relatório de caixa utilizando a função mestre."""
+    _gerar_relatorio_generico(
+        app,
+        data_alvo,
+        atalho_teclado='{VK_MENU}{RIGHT 7}{DOWN 3}{RIGHT}{DOWN 2}{ENTER}',
+        nome_arquivo=f"Caixa-{dia}-{mes}-{ano}.pdf"
+    )
 
 
 # noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
@@ -276,31 +298,6 @@ def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: s
     # ==========================================
     vis = aguardar_carregamento_relatorio(app)
     imprimir_e_salvar_pdf(vis, f"Atos-{d}-{m}-{a}.pdf")
-    fechar_janelas_em_cadeia(app)
-
-# noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
-def gerar_relatorio_caixa(app: Application, data_alvo: str, dia: str, mes: str, ano: str) -> None:
-    """Navega pelos menus, preenche a data e imprime o relatório de caixa."""
-    app.top_window().set_focus()
-
-    # Navegação inicial nos menus
-    send_keys('{VK_MENU}{RIGHT 7}{DOWN 3}{RIGHT}{DOWN 2}{ENTER}')
-    time.sleep(2)
-
-    janela_relatorio = app.top_window()
-
-    # Preenchimento de datas
-    janela_relatorio.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
-    janela_relatorio.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
-
-    # Gerar Relatório
-    btn_gerar = janela_relatorio.child_window(auto_id="btnGerar", control_type="Button")
-    btn_gerar.set_focus()
-    send_keys('{ENTER}')
-
-    # Finalização
-    janela_visualizacao = aguardar_carregamento_relatorio(app)
-    imprimir_e_salvar_pdf(janela_visualizacao, f"Caixa-{dia}-{mes}-{ano}.pdf")
     fechar_janelas_em_cadeia(app)
 
 def executar(data_alvo: str, caminho_exe: str) -> None:

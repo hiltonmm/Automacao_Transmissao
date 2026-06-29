@@ -134,9 +134,9 @@ def comparacao_linha_a_linha(pdf_atos, pdf_selos, pasta_tmp, data_alvo):
     selos_selos = set(df_selos.index)
 
     for selo in selos_atos - selos_selos:
-        discrepancias.append(f"Selo {selo} presente em ATOS, mas AUSENTE em SELOS.")
+        discrepancias.append(f"Selo {selo} presente em ATOS, mas Ausente em SELOS.")
     for selo in selos_selos - selos_atos:
-        discrepancias.append(f"Selo {selo} presente em SELOS, mas AUSENTE em ATOS.")
+        discrepancias.append(f"Selo {selo} presente em SELOS, mas Ausente em ATOS.")
 
     def limpa_para_comparar(valor):
         v = str(valor).strip().lower()
@@ -152,7 +152,7 @@ def comparacao_linha_a_linha(pdf_atos, pdf_selos, pasta_tmp, data_alvo):
             if val_a != val_s:
                 discrepancias.append(f"Selo: {selo} | Coluna: {col} | Atos: {val_a} | Selos: {val_s}")
 
-    return "\n".join(discrepancias) if discrepancies else "Nenhuma divergência linha a linha encontrada."
+    return "\n".join(discrepancias) if discrepancias else "Nenhuma divergência linha a linha encontrada."
 
 
 # ==========================================
