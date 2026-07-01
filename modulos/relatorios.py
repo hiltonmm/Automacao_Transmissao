@@ -4,11 +4,8 @@ import time
 import logging
 from pathlib import Path
 from typing import Any
-import win32api
 from pywinauto.application import Application
-from pywinauto import Desktop
 from pywinauto.keyboard import send_keys
-from pywinauto import mouse
 from pywinauto.findwindows import ElementNotFoundError
 from pywinauto.uia_defines import NoPatternInterfaceError
 
@@ -18,27 +15,29 @@ BTN_IMPRIMIR = "Pr" + "int"
 # ==========================================
 # FUNÇÕES DE APOIO
 # ==========================================
-def fechar_janelas_em_cadeia(app: Application, num_esc: int = 1) -> None:
+def fechar_janelas_em_cadeia(app: Application) -> None:
     """
-    Fecha janelas de forma sequencial.
-    :param app: Instância da aplicação.
-    :param num_esc: Quantidade de vezes que a tecla ESC será pressionada.
+    Envia 1 único ESC para fechar o relatório e retornar à tela principal,
+    conforme o comportamento exato do sistema.
     """
-    logging.info(f"Fechando janelas com {num_esc} tentativas de ESC")
-    for _ in range(num_esc):
-        # noinspection PyBroadException
-        try:
-            # Garante que sempre pegamos a janela do topo atual em cada iteração
-            app.top_window().set_focus()
-            send_keys('{ESC}')
-            time.sleep(1)
-        except Exception:
-            # Caso a janela desapareça antes de dar todos os ESCs, encerramos o loop
-            break
+    logging.info("Fechando a janela de visualização do relatório com 1 ESC...")
 
+    try:
+        # Garante que a janela do relatório (que voltou ao foco) esteja ativa
+        app.top_window().set_focus()
+        time.sleep(0.5)
+
+        # Envia a tecla ESC
+        send_keys('{ESC}')
+
+        # Dá um tempinho para o sistema voltar para a tela de fundo verde
+        time.sleep(1.5)
+
+    except Exception as e:
+        logging.warning(f"Aviso ao enviar ESC: {e}")
 
 def aguardar_carregamento_relatorio(app: Application) -> Any:
-    """Aguarda carregamento do relatório."""
+    """Aguarda carregamento do relatório procurando o botão de Print."""
     inicio = time.time()
     while (time.time() - inicio) < 180:
         # noinspection PyBroadException
@@ -51,83 +50,49 @@ def aguardar_carregamento_relatorio(app: Application) -> Any:
         time.sleep(2)
     raise RuntimeError("Timeout carregando relatório.")
 
-
-def imprimir_e_salvar_pdf(janela: Any, nome_arquivo: str) -> None:
-    """Executa salvamento assumindo que a janela já está focada."""
+def salvar_pdf(janela: Any, nome_arquivo: str, digitar_caminho: bool = True) -> None:
+    """Exporta o PDF e salva seguindo a sequência exata de atalhos do usuário."""
     janela.set_focus()
-    pos = win32api.GetCursorPos()
-
-    # Clica em imprimir
-    janela.child_window(title=BTN_IMPRIMIR, control_type="Button").click_input()
-    mouse.move(coords=pos)
-
-    # Aguarda a janela de impressão do Windows
-    area = Desktop(backend="uia")
-    janela_impressao = area.window(title="DOC-Windows - Imprimir")
-    janela_impressao.wait('ready', timeout=15)
-    janela_impressao.set_focus()
     time.sleep(1)
 
-    # Seleção da impressora de forma direta e segura
-    caixa = janela_impressao.child_window(control_type="ComboBox", found_index=0)
-    caixa.set_focus()
-    # Abre o dropdown usando o método do Pywinauto
-    caixa.expand()
-    time.sleep(0.5)
-
-    try:
-        # Tenta selecionar diretamente da lista
-        caixa.select("Microsoft Print to PDF")
-    except (ElementNotFoundError, RuntimeError):
-        # Se falhar, usa a busca pelo nome do item na lista
-        caixa.child_window(title="Microsoft Print to PDF", control_type="ListItem").click_input()
-
+    # 1. Abre o menu e seleciona PDF
+    toolbar = janela.child_window(auto_id="toolStrip1", control_type="ToolBar")
+    toolbar.child_window(title="Export drop down menu", control_type="MenuItem").click_input()
     time.sleep(1)
-    # Fecha o dropdown e segue para o imprimir
-    send_keys('{ENTER}')
-    time.sleep(1)
-    send_keys('{TAB 7}{ENTER}')
+    send_keys('{DOWN 2}{ENTER}')
 
-    # --- AQUI ESTÁ A MUDANÇA: Foco direto sem procurar ---
-    # Como a janela já abre focada, apenas esperamos ela estabilizar
-    time.sleep(4)
+    # Aguarda a janela "Salvar Como" abrir e focar no campo de Nome
+    time.sleep(3)
+    caminho_tmp = str(Path(__file__).resolve().parent.parent / "tmp")
 
-    caminho = str(Path(__file__).resolve().parent.parent / "tmp")
-
-    # 1. Digitar o nome do arquivo
-    send_keys('%n')
-    time.sleep(0.5)
+    # 2. Digita o nome do arquivo
+    send_keys('^a{BACKSPACE}')  # Limpa por segurança
+    time.sleep(0.3)
     send_keys(nome_arquivo, with_spaces=True)
-    time.sleep(0.3)
-
-    # 2. tecla controle + L (Abre a barra de endereços para navegação)
-    send_keys('^l')
     time.sleep(0.5)
 
-    # 3. Digitar o endereço da pasta tmp
-    send_keys(caminho, with_spaces=True)
-    time.sleep(0.3)
+    # 3. Lógica do Caminho
+    if digitar_caminho:
+        # APENAS Alt+E para ir à barra de endereços
+        send_keys('%e')
+        time.sleep(1)
 
-    # 4. ENTER (Confirma a mudança de pasta)
-    send_keys('{ENTER}')
-    time.sleep(1)
+        # 4. Digita o caminho e dá ENTER para confirmar a pasta
+        send_keys(caminho_tmp, with_spaces=True)
+        time.sleep(0.5)
+        send_keys('{ENTER}')
+        time.sleep(1.5)
 
-    # 5. Alt + L (Este comando força o foco no botão salvar ou na lista de arquivos em alguns Windows)
+    # 5. Alt+L para Salvar
     send_keys('%l')
-    time.sleep(1)
 
-    # Pequena pausa para o sistema processar o arquivo antes de fechar a janela do relatório
-    time.sleep(2)
-
+    # Aguarda o Windows salvar o arquivo e fechar a janela "Salvar Como" sozinho
+    time.sleep(3)
 
 # ==========================================
-# ROTINA DE RELATÓRIO
+# FUNÇÃO BASE DE RELATÓRIOS
 # ==========================================
-
-# ==========================================
-# FUNÇÃO BASE DE RELATÓRIOS (Resolve a Duplicação)
-# ==========================================
-def _gerar_relatorio_generico(app: Application, data_alvo: str, atalho_teclado: str, nome_arquivo: str) -> None:
+def _gerar_relatorio_generico(app: Application, data_alvo: str, atalho_teclado: str, nome_arquivo: str, digitar_caminho: bool = True) -> None:
     """Função mestre que navega, preenche datas e salva qualquer relatório padronizado."""
     app.top_window().set_focus()
 
@@ -135,24 +100,33 @@ def _gerar_relatorio_generico(app: Application, data_alvo: str, atalho_teclado: 
     send_keys(atalho_teclado)
     time.sleep(2)
 
+    # Coleta a nova janela que se abriu e ESPERA ela ficar pronta
     janela_relatorio = app.top_window()
+    janela_relatorio.wait('ready', timeout=15)
 
-    # 2. Preenchimento de datas
-    janela_relatorio.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
-    janela_relatorio.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data_alvo}")
+    # 2. Preenchimento de datas (Com espera de visibilidade)
+    campo_data1 = janela_relatorio.child_window(auto_id="txtData1", control_type="Edit")
+    campo_data1.wait('visible', timeout=10)
+    campo_data1.type_keys(f"{{HOME}}{data_alvo}")
+
+    campo_data2 = janela_relatorio.child_window(auto_id="txtData2", control_type="Edit")
+    campo_data2.type_keys(f"{{HOME}}{data_alvo}")
 
     # 3. Gerar Relatório
     btn_gerar = janela_relatorio.child_window(auto_id="btnGerar", control_type="Button")
+    btn_gerar.wait('visible', timeout=10)
     btn_gerar.set_focus()
     send_keys('{ENTER}')
 
     # 4. Finalização
     janela_visualizacao = aguardar_carregamento_relatorio(app)
-    imprimir_e_salvar_pdf(janela_visualizacao, nome_arquivo)
+    salvar_pdf(janela_visualizacao, nome_arquivo, digitar_caminho)
+
+    # Fechamento seguro unificado
     fechar_janelas_em_cadeia(app)
 
 # ==========================================
-# FUNÇÕES ESPECÍFICAS (Agora limpas e sem avisos)
+# FUNÇÕES ESPECÍFICAS
 # ==========================================
 def gerar_relatorio_selos(app: Application, data_alvo: str, dia: str, mes: str, ano: str) -> None:
     """Gera o relatório de selos utilizando a função mestre."""
@@ -160,7 +134,9 @@ def gerar_relatorio_selos(app: Application, data_alvo: str, dia: str, mes: str, 
         app,
         data_alvo,
         atalho_teclado='{VK_MENU}{RIGHT 5}{DOWN 5}{RIGHT}{DOWN 5}{ENTER}',
-        nome_arquivo=f"SELO-{dia}-{mes}-{ano}.pdf"
+        nome_arquivo=f"SELO-{dia}-{mes}-{ano}.pdf",
+        digitar_caminho=True
+
     )
 
 def gerar_relatorio_caixa(app: Application, data_alvo: str, dia: str, mes: str, ano: str) -> None:
@@ -169,34 +145,28 @@ def gerar_relatorio_caixa(app: Application, data_alvo: str, dia: str, mes: str, 
         app,
         data_alvo,
         atalho_teclado='{VK_MENU}{RIGHT 7}{DOWN 3}{RIGHT}{DOWN 2}{ENTER}',
-        nome_arquivo=f"Caixa-{dia}-{mes}-{ano}.pdf"
+        nome_arquivo=f"Caixa-{dia}-{mes}-{ano}.pdf",
+        digitar_caminho=False
     )
 
-
-# noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
 def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: str) -> None:
-    """Relatório Financeiro."""
+    """Relatório Financeiro (Atos Praticados)."""
     app.top_window().set_focus()
     send_keys('{VK_MENU}{RIGHT 7}{DOWN 3}{RIGHT}{DOWN 20}{ENTER}')
     time.sleep(2)
 
-    # CORREÇÃO: Unificação do nome da variável para janela_relatorio
     janela_relatorio = app.top_window()
     janela_relatorio.child_window(auto_id="txtData1", control_type="Edit").type_keys(f"{{HOME}}{data}")
     janela_relatorio.child_window(auto_id="txtData2", control_type="Edit").type_keys(f"{{HOME}}{data}")
 
-    # ==========================================
     # --- CHECKBOXES ---
-    # ==========================================
-    print("Configurando os CheckBoxes via teclado rápido...")
-
+    logging.info("Configurando os CheckBoxes via teclado rápido...")
     checkboxes_marcar = [
         "chkEnquadramento", "chkIncluirRepasse", "chkExibirSelo",
         "chkImprimirEncargos", "chkTodasCobrancas", "chkTodasContas"
     ]
     checkboxes_desmarcar = ["chkAgrupaData"]
 
-    # Marcação Instantânea
     for id_chk in checkboxes_marcar:
         try:
             caixa = janela_relatorio.child_window(auto_id=id_chk, control_type="CheckBox")
@@ -206,7 +176,6 @@ def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: s
         except (ElementNotFoundError, RuntimeError, NoPatternInterfaceError):
             pass
 
-    # Desmarcação Instantânea
     for id_chk in checkboxes_desmarcar:
         try:
             caixa = janela_relatorio.child_window(auto_id=id_chk, control_type="CheckBox")
@@ -216,10 +185,8 @@ def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: s
         except (ElementNotFoundError, RuntimeError, NoPatternInterfaceError):
             pass
 
-    # ==========================================
     # --- RADIO BUTTONS ---
-    # ==========================================
-    print("Selecionando o formato Analítico...")
+    logging.info("Selecionando o formato Analítico...")
     try:
         rdb_analitico = janela_relatorio.child_window(auto_id="rdbAnalitico", control_type="RadioButton")
         rdb_analitico.set_focus()
@@ -228,24 +195,18 @@ def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: s
     except (ElementNotFoundError, RuntimeError):
         pass
 
-    print("\nFiltros configurados com sucesso!")
-
-    # ==========================================
-    # FILTRO DE ATOS (Bypass de Tabela Virtualizada)
-    # ==========================================
-    print("\nAbrindo a janela de Filtro de Atos...")
+    # --- FILTRO DE ATOS ---
+    logging.info("Abrindo a janela de Filtro de Atos...")
     btn_filtro = janela_relatorio.child_window(auto_id="btnFiltro", control_type="Button")
     btn_filtro.click_input()
     time.sleep(1)
 
     janela_filtro = app.top_window()
-    print("Marcando todos os itens...")
     btn_marcar_todos = janela_filtro.child_window(auto_id="btnMarcar", control_type="Button")
     btn_marcar_todos.click_input()
     time.sleep(0.5)
 
-    print("Desmarcando os atos específicos via teclado...")
-
+    logging.info("Desmarcando os atos específicos via teclado...")
     indices_para_desmarcar = [
         0, 2, 3, 4, 26, 38, 39, 61, 62, 63, 64, 65, 66, 67, 68, 69,
         70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84,
@@ -264,40 +225,29 @@ def gerar_relatorio_financeiro(app: Application, data: str, d: str, m: str, a: s
         for linha_atual in range(1, 93):
             send_keys('{DOWN}')
             time.sleep(0.05)
-
             if linha_atual in indices_para_desmarcar:
                 send_keys('{SPACE}')
                 time.sleep(0.05)
-
     except (ElementNotFoundError, RuntimeError) as e:
-        print(f"Erro ao navegar na tabela. Detalhe: {e}")
+        logging.warning(f"Erro ao navegar na tabela de atos. Detalhe: {e}")
 
     time.sleep(0.5)
-    print("Fechando a janela de filtro...")
     btn_fechar = janela_filtro.child_window(auto_id="btFechar", control_type="Button")
     btn_fechar.click_input()
     time.sleep(1)
 
-    # ==========================================
-    # GERAR RELATÓRIO
-    # ==========================================
-    print("Gerando o relatório...")
-
-    # Atribui a variável fora do try para garantir que ela exista
+    # --- GERAR RELATÓRIO ---
+    logging.info("Gerando o relatório financeiro...")
     btn_gerar = janela_relatorio.child_window(auto_id="btnGerar", control_type="Button")
-
     try:
         btn_gerar.set_focus()
         send_keys('{ENTER}')
     except (ElementNotFoundError, RuntimeError):
-        # Fallback caso o send_keys falhe
         btn_gerar.click_input()
 
-    # ==========================================
-    # FINALIZAÇÃO
-    # ==========================================
+    # --- FINALIZAÇÃO ---
     vis = aguardar_carregamento_relatorio(app)
-    imprimir_e_salvar_pdf(vis, f"Atos-{d}-{m}-{a}.pdf")
+    salvar_pdf(vis, f"Atos-{d}-{m}-{a}.pdf", digitar_caminho=False)
     fechar_janelas_em_cadeia(app)
 
 def executar(data_alvo: str, caminho_exe: str) -> None:
