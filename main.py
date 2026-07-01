@@ -14,6 +14,7 @@ import modulos.iniciar as iniciar
 import modulos.relatorios as relatorios
 import modulos.auditoria as auditoria
 from modulos.contexto import context
+from modulos import gerador_xml
 
 # ==========================================
 # 1. Configuração do sistema de logs
@@ -55,14 +56,11 @@ def exibir_alerta_erro(mensagem_erro: str = "") -> None:
     estilo = win32con.MB_ICONERROR | win32con.MB_SYSTEMMODAL
     win32api.MessageBox(0, mensagem, "Erro na Automação", estilo)
 
-
 def exibir_alerta_sucesso() -> None:
     """Exibe uma caixa de mensagem informando que a execução terminou com sucesso."""
     mensagem = "A automação foi finalizada com sucesso e sem erros!"
     estilo = win32con.MB_ICONINFORMATION | win32con.MB_SYSTEMMODAL
     win32api.MessageBox(0, mensagem, "Automação Concluída", estilo)
-
-
 # ==========================================
 # 4. Orquestração principal
 # ==========================================
@@ -86,7 +84,6 @@ def main():
         logging.info("--> Executando Passo 3: Auditoria de Relatórios (Atos x Selos)")
         diretorio_atual = os.path.dirname(os.path.abspath(__file__))
         pasta_tmp = os.path.join(diretorio_atual, "tmp")
-
         # Executa a conferência cega
         auditoria.executar(data_alvo, pasta_tmp)
 
@@ -99,7 +96,12 @@ def main():
 
         logging.info("Auditoria concluída: Nenhuma divergência encontrada. Lote aprovado!")
 
-        # --- SE CHEGAR AQUI, DEU TUDO CERTO ---
+        # 4 - Gerar XML
+        logging.info("--> Executando Passo 4: Geração dos arquivos XML")
+        gerador_xml.executar(data_alvo)
+        logging.info("Arquivo XML gerado com sucesso!")
+
+         # --- SE CHEGAR AQUI, DEU TUDO CERTO ---
         exibir_alerta_sucesso()
 
     except Exception as e:
