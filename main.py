@@ -16,6 +16,7 @@ from modulos.contexto import context
 from modulos import gerador_xml
 from modulos import validador_xsd
 from modulos import relatorio_final
+from modulos import ui
 
 # ==========================================
 # 1. Configuração do sistema de logs
@@ -76,9 +77,10 @@ def main():
                 data_alvo = iniciar.executar(USUARIO, SENHA, DOC_PATH)
                 primeira_execucao = False
             else:
-                logging.info("-→ DOC-Windows já aberto. Solicitando nova data ao usuário...")
-                # Reutilizamos sua função original para manter o padrão visual e a máscara
-                data_alvo = iniciar.obter_data_interface()
+                logging.info("-→ Solicitando nova data ao usuário...")
+                data_alvo = ui.obter_data_interface()  # Usa o módulo novo
+                if not data_alvo or data_alvo.strip() == "":
+                    break
 
                 if not data_alvo or data_alvo.strip() == "":
                     logging.info("Usuário cancelou a inserção de nova data. Encerrando.")

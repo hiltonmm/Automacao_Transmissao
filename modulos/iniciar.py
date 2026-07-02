@@ -2,11 +2,9 @@
 # noinspection SpellCheckingInspection,NonAsciiCharacters,GrammarInspection
 import time
 import logging
-import tkinter as tk
-from tkinter import messagebox
-from datetime import datetime
 from pathlib import Path
 from pywinauto.application import Application
+from modulos import ui
 
 
 # ==========================================
@@ -58,73 +56,11 @@ def limpar_pasta_tmp():
 
 
 # ==========================================
-# 2. CAPTURA E VALIDAÇÃO DA DATA
-# ==========================================
-def obter_data_interface():
-    logging.info("Aguardando inserção de data pelo usuário na interface...")
-    resultado_data = []
-
-    def formatar_data(event):
-        if event.keysym == "BackSpace":
-            return
-        texto = entry_data.get().replace("/", "")[:8]
-        novo_texto = ""
-        for i, char in enumerate(texto):
-            if char.isdigit():
-                if i in [2, 4]: novo_texto += "/"
-                novo_texto += char
-        entry_data.delete(0, tk.END)
-        entry_data.insert(0, novo_texto)
-
-    # noinspection PyUnusedLocal
-    def validar_e_salvar(event=None):
-        data_digitada = entry_data.get()
-        try:
-            datetime.strptime(data_digitada, "%d/%m/%Y")
-            resultado_data.append(data_digitada.replace("/", ""))
-            root.destroy()
-        except ValueError:
-            messagebox.showerror("Data Inválida", "Por favor, digite uma data válida no formato DD/MM/AAAA.")
-            entry_data.delete(0, tk.END)
-
-    def cancelar_operacao():
-        root.destroy()
-
-    root = tk.Tk()
-    root.title("Configuração do Robô")
-    root.geometry("320x160")
-    root.eval('tk::PlaceWindow . center')
-    root.attributes("-topmost", True)
-    root.protocol("WM_DELETE_WINDOW", cancelar_operacao)
-
-    root.bind('<Return>', validar_e_salvar)
-
-    label = tk.Label(root, text="Informe a data para gerar os relatórios:", font=("Arial", 10))
-    label.pack(pady=15)
-
-    entry_data = tk.Entry(root, font=("Arial", 14), justify="center", width=12)
-    entry_data.pack(pady=5)
-    entry_data.bind("<KeyRelease>", formatar_data)
-
-    btn_iniciar = tk.Button(root, text="Iniciar Automação", command=validar_e_salvar, bg="#4CAF50", fg="white",
-                            font=("Arial", 10, "bold"))
-    btn_iniciar.pack(pady=10)
-
-    entry_data.focus()
-    root.mainloop()
-
-    if not resultado_data:
-        raise RuntimeError("Operação cancelada pelo usuário. O robô não será iniciado.")
-
-    return resultado_data[0]
-
-
-# ==========================================
 # 3. FUNÇÃO PRINCIPAL DO MÓDULO
 # ==========================================
 def executar(usuario, senha, caminho_exe):
     limpar_pasta_tmp()
-    data_alvo = obter_data_interface()
+    data_alvo = ui.obter_data_interface()
     logging.info(f"Data validada: {data_alvo}. Iniciando o sistema...")
 
     pasta_do_programa = str(Path(caminho_exe).parent)
