@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import re
 import logging
@@ -24,15 +25,20 @@ def extrair_texto_pdf(caminho_arquivo: str) -> str:
 # FUNÇÕES NÍVEL 1: TIPOS DE COBRANÇA
 # ==========================================
 def extrair_tipos_cobranca(texto):
-    """Extrai as quantidades do quadro de resumo restringindo a análise ao rodapé do PDF."""
-    resultados = {}
+    """Extrai as quantidades isolando o bloco de totais no final do documento."""
+    resultados = {'CC': 0, 'NH': 0, 'JG': 0, 'JH': 0, 'SC': 0}
 
-    # Restringe a busca aos últimos 2000 caracteres para evitar falsos positivos do corpo
-    rodape = texto[-2000:] if len(texto) > 2000 else texto
+    # Isola a busca apenas na área correta para evitar contagens falsas do corpo do texto
+    idx = texto.rfind("Total Tipo de Cobrança")
+    if idx != -1:
+        # Troca quebras de linha por espaço para criar um bloco de texto contínuo
+        bloco = texto[idx:].replace('\n', ' ')
+        for tipo in resultados.keys():
+            # Procura a sigla, ignora tudo que não for dígito, e captura o número
+            match = re.search(rf'\b{tipo}\D*(\d+)', bloco)
+            if match:
+                resultados[tipo] = int(match.group(1))
 
-    for tipo in ['CC', 'NH', 'JG', 'JH', 'SC']:
-        matches = re.findall(rf'\b{tipo}[\s:]*(\d+)', rodape)
-        resultados[tipo] = int(matches[-1]) if matches else 0
     return resultados
 
 
@@ -40,63 +46,93 @@ def extrair_tipos_cobranca(texto):
 # FUNÇÕES NÍVEL 2: VALORES FINANCEIROS
 # ==========================================
 def normalizar_moeda(valor):
-    """Garante que o formato seja X.XXX,XX corrigindo falhas de leitura do PDF"""
+    """Garante que o formato seja X.XXX,XX corrigindo falhas (ex: 4.287.13 para 4.287,13)"""
     if not valor: return "0,00"
+    valor = valor.strip()
     if len(valor) >= 3 and valor[-3] == '.':
         valor = valor[:-3] + ',' + valor[-2:]
     return valor
 
 
 def extrair_fundos_selos(texto):
-    """Extrai os valores da lista vertical do relatório de Selos isolando o bloco de totais"""
+    """Extrai os valores da lista vertical do relatório de Selos."""
     idx = texto.rfind("Total Emolumentos")
     if idx != -1:
         texto = texto[idx:]
 
     chaves = [
-        ("Emolumentos", r'Emolumentos[^\d]*([\d\.,]+)'),
-        ("FETJ", r'FETJ[^\d]*([\d\.,]+)'),
-        ("FUNDPERJ", r'FUNDPERJ[^\d]*([\d\.,]+)'),
-        ("FUNPERJ", r'FUNPERJ[^\d]*([\d\.,]+)'),
-        ("FUNARPEN", r'FUNARPEN[^\d]*([\d\.,]+)'),
-        ("PMCMV", r'PMCMV[^\d]*([\d\.,]+)'),
-        ("FUNPGALERJ", r'FUNPGALERJ[^\d]*([\d\.,]+)'),
-        ("FUNPGT", r'FUNPGT[^\d]*([\d\.,]+)'),
-        ("ISS", r'ISS[^\d]*([\d\.,]+)'),
-        ("SELO", r'SELO[^\d]*([\d\.,]+)'),
-        ("FUNDAC_PGUERJ", r'([\d\.,]+)\s*FUNDAC')
+        ("Emolumentos", r'Total Emolumentos[^\d]*([\d\.,]+)'),
+        ("FETJ", r'Total FETJ[^\d]*([\d\.,]+)'),
+        ("FUNDPERJ", r'Total FUNDPERJ[^\d]*([\d\.,]+)'),
+        ("FUNPERJ", r'Total FUNPERJ[^\d]*([\d\.,]+)'),
+        ("FUNARPEN", r'Total FUNARPEN[^\d]*([\d\.,]+)'),
+        ("PMCMV", r'Total PMCMV[^\d]*([\d\.,]+)'),
+        ("FUNPGALERJ", r'Total FUNPGALERJ[^\d]*([\d\.,]+)'),
+        ("FUNPGT", r'Total FUNPGT[^\d]*([\d\.,]+)'),
+        ("ISS", r'Total ISS[^\d]*([\d\.,]+)'),
+        ("SELO", r'Total SELO[^\d]*([\d\.,]+)'),
+        # CORREÇÃO: Captura o número que aparece ANTES da palavra FUNDAC
+        ("FUNDAC_PGUERJ", r'([\d\.,]+)\s*FUNDAC_PGUERJ')
     ]
 
     fundos = {}
     for nome, regex in chaves:
-        match = re.search(regex, texto)
-        fundos[nome] = normalizar_moeda(match.group(1)) if match else "0,00"
+        match = re.search(regex, texto, re.IGNORECASE)
+        fundos[nome] = normalizar_moeda(str(match.group(1))) if match else "0,00"
     return fundos
 
 
-def extrair_fundos_atos(texto):
-    """Extrai os valores da linha horizontal contínua do relatório de Atos"""
-    idx = texto.find("Total geral:")
-    if idx == -1: return {}
-    trecho = texto[idx:]
+def extrair_fundos_atos(caminho_pdf):
+    """
+    Lê a estrutura física da tabela do PDF de Atos, preservando colunas vazias.
+    Utiliza o mapeamento exato de índices fornecido para evitar 'efeito dominó'.
+    """
+    fundos_encontrados = {
+        "Emolumentos": "0,00", "FETJ": "0,00", "FUNDPERJ": "0,00",
+        "FUNPERJ": "0,00", "FUNARPEN": "0,00", "PMCMV": "0,00",
+        "FUNPGALERJ": "0,00", "FUNPGT": "0,00", "ISS": "0,00",
+        "SELO": "0,00", "FUNDAC_PGUERJ": "0,00"
+    }
 
-    valores = re.findall(r'\b\d{1,3}(?:[.,]\d{3})*[.,]\d{2}\b', trecho)
+    def limpar_celula(valor):
+        """Limpa a célula e pega apenas o valor final (caso haja quebras de linha)."""
+        if not valor or str(valor).strip() == "":
+            return "0,00"
+        # Pega a última linha da célula (o total geral definitivo)
+        str_valor = str(valor).strip().split('\n')[-1].strip()
+        # Se na extração houver lixo não numérico, a regex limpa
+        numero_puro = re.search(r'([\d.,]+)', str_valor)
+        if numero_puro:
+            return normalizar_moeda(numero_puro.group(1))
+        return "0,00"
 
-    if len(valores) >= 11:
-        return {
-            "Emolumentos": normalizar_moeda(valores[0]),
-            "FETJ": normalizar_moeda(valores[1]),
-            "FUNDPERJ": normalizar_moeda(valores[2]),
-            "FUNPERJ": normalizar_moeda(valores[3]),
-            "FUNARPEN": normalizar_moeda(valores[4]),
-            "PMCMV": normalizar_moeda(valores[5]),
-            "FUNPGALERJ": normalizar_moeda(valores[6]),
-            "FUNPGT": normalizar_moeda(valores[7]),
-            "ISS": normalizar_moeda(valores[8]),
-            "SELO": normalizar_moeda(valores[9]),
-            "FUNDAC_PGUERJ": normalizar_moeda(valores[10])
-        }
-    return {}
+    with pdfplumber.open(caminho_pdf) as pdf:
+        # A linha de totais geralmente está na última página
+        for pagina in reversed(pdf.pages):
+            tabelas = pagina.extract_tables()
+            for tabela in tabelas:
+                for linha in tabela:
+                    # Verifica se a linha atual contém o "Total geral" na Coluna 0
+                    if linha and linha[0] and "Total geral" in str(linha[0]):
+                        try:
+                            # Mapeamento Determinístico (Exato)
+                            fundos_encontrados["Emolumentos"] = limpar_celula(linha[3])
+                            fundos_encontrados["FETJ"] = limpar_celula(linha[4])
+                            fundos_encontrados["FUNDPERJ"] = limpar_celula(linha[5])
+                            fundos_encontrados["FUNPERJ"] = limpar_celula(linha[6])
+                            fundos_encontrados["FUNARPEN"] = limpar_celula(linha[7])
+                            fundos_encontrados["PMCMV"] = limpar_celula(linha[8])
+                            fundos_encontrados["FUNPGALERJ"] = limpar_celula(linha[9])
+                            fundos_encontrados["FUNPGT"] = limpar_celula(linha[10])
+                            fundos_encontrados["ISS"] = limpar_celula(linha[11])
+                            fundos_encontrados["SELO"] = limpar_celula(linha[12])
+                            fundos_encontrados["FUNDAC_PGUERJ"] = limpar_celula(linha[13])
+                        except IndexError:
+                            logging.warning("Colunas insuficientes na linha de Totais de Atos.")
+
+                        return fundos_encontrados
+
+    return fundos_encontrados
 
 
 # ==========================================
@@ -104,11 +140,15 @@ def extrair_fundos_atos(texto):
 # ==========================================
 def comparacao_linha_a_linha(pdf_atos, pdf_selos, pasta_tmp, data_alvo):
     """Gera CSVs e realiza o cruzamento completo e exato de todas as colunas estruturais."""
+    # NOTA: Se o módulo conversor_csv também quebrou com o novo PDF, será necessário ajustá-lo futuramente.
     conversor_csv.extrair_atos_com_tabela(pdf_atos, pasta_tmp, data_alvo)
     conversor_csv.extrair_selos_com_tabela(pdf_selos, pasta_tmp, data_alvo)
 
-    df_atos = pd.read_csv(os.path.join(pasta_tmp, f"Atos_{data_alvo}.csv"), sep=';', dtype=str)
-    df_selos = pd.read_csv(os.path.join(pasta_tmp, f"Selos_{data_alvo}.csv"), sep=';', dtype=str)
+    try:
+        df_atos = pd.read_csv(os.path.join(pasta_tmp, f"Atos_{data_alvo}.csv"), sep=';', dtype=str)
+        df_selos = pd.read_csv(os.path.join(pasta_tmp, f"Selos_{data_alvo}.csv"), sep=';', dtype=str)
+    except Exception as e:
+        return f"Falha ao carregar CSV para Nível 3. O módulo conversor_csv pode precisar de adaptação ao novo PDF: {e}"
 
     df_atos.set_index('Selo', inplace=True)
     df_selos.set_index('Selo', inplace=True)
@@ -146,11 +186,12 @@ def comparacao_linha_a_linha(pdf_atos, pdf_selos, pasta_tmp, data_alvo):
 
     for selo in selos_atos.intersection(selos_selos):
         for col in colunas:
-            val_a = limpa_para_comparar(df_atos.loc[selo, col])
-            val_s = limpa_para_comparar(df_selos.loc[selo, col])
+            if col in df_atos.columns and col in df_selos.columns:
+                val_a = limpa_para_comparar(df_atos.loc[selo, col])
+                val_s = limpa_para_comparar(df_selos.loc[selo, col])
 
-            if val_a != val_s:
-                discrepancias.append(f"Selo: {selo} | Coluna: {col} | Atos: {val_a} | Selos: {val_s}")
+                if val_a != val_s:
+                    discrepancias.append(f"Selo: {selo} | Coluna: {col} | Atos: {val_a} | Selos: {val_s}")
 
     return "\n".join(discrepancias) if discrepancias else "Nenhuma divergência linha a linha encontrada."
 
@@ -192,8 +233,12 @@ def executar(data_alvo: str, pasta_tmp: str) -> None:
 
         # --- NÍVEL 2: VALORES FINANCEIROS DETALHADOS ---
         logging.info("[Auditando Nível 2] Verificando todos os fundos e taxas (FETJ, FUNARPEN, etc)...")
-        fundos_atos = extrair_fundos_atos(texto_atos)
+
+        # 1. Extrai os selos usando o texto
         fundos_selos = extrair_fundos_selos(texto_selos)
+
+        # 2. CORREÇÃO: Lê a tabela do PDF de Atos cirurgicamente pelos índices
+        fundos_atos = extrair_fundos_atos(arq_a)
 
         erros_financeiros = []
         logging.info("-" * 50)
@@ -228,8 +273,8 @@ def executar(data_alvo: str, pasta_tmp: str) -> None:
         # SALVANDO DADOS NO CONTEXTO PARA USO FUTURO
         # ==========================================
         context.resultado_auditoria = {"status": "sucesso"}
-        context.valores_financeiros = fundos_selos  # Salva os valores em Reais
-        context.quantidades_cobranca = cobrancas_selos  # Salva os totais de CC, JG, etc.
+        context.valores_financeiros = fundos_selos
+        context.quantidades_cobranca = cobrancas_selos
 
     finally:
         # ==========================================
