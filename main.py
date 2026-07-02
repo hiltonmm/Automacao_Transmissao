@@ -91,6 +91,7 @@ def main():
             relatorios.executar(data_alvo, DOC_PATH)
 
             # 3 - Auditoria (Estruturada e Determinística)
+
             logging.info("--> Passo 3: Auditoria Estrita de Relatórios")
             auditoria.executar(data_alvo, pasta_tmp)
 

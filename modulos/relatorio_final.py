@@ -23,29 +23,32 @@ def imprimir_pdf(caminho_pdf: str):
         logging.error(f"Falha ao imprimir {caminho_pdf}: {e}")
         return False
 
+
 def extrair_depositos_previos_dinheiro(caminho_pdf: str) -> bool:
     """Varre o PDF em busca do valor de Depósitos Prévios (Dinheiro)."""
+
+    # GARANTIA: Sempre reseta para 0.0 antes de tentar ler o novo PDF
+    context.depositos_previos_dinheiro = 0.0
+
     try:
         with pdfplumber.open(caminho_pdf) as pdf:
             for i, pagina in enumerate(pdf.pages):
                 texto = pagina.extract_text() or ""
-                # Regex limpo sem escape redundante
                 match = re.search(r"Dinheiro.*?Depósitos Prévios\s+([\d.,]+)", texto, re.DOTALL)
 
                 if match:
                     valor_str = match.group(1)
-                    # Normaliza: remove pontos de milhar, troca vírgula por ponto
                     valor_float = float(valor_str.replace('.', '').replace(',', '.'))
 
                     context.depositos_previos_dinheiro = valor_float
                     logging.info(f"Valor extraído na página {i + 1}: R$ {valor_float:.2f}")
                     return True
 
-        logging.warning("O valor de 'Depósitos Prévios (Dinheiro)' não foi localizado no PDF.")
-        return False
+        logging.warning("O valor de 'Depósitos Prévios (Dinheiro)' não foi localizado no PDF. Valor definido como 0.0.")
+        return False  # O contexto já foi limpo no início da função
 
     except Exception as e:
-        logging.error(f"Erro ao processar o PDF de conferência: {e}")
+        logging.error(f"Erro ao extrair depósitos prévios: {e}")
         return False
 
 def salvar_relatorio_pdf(data_alvo: str):
@@ -156,6 +159,7 @@ def executar(data_alvo: str):
     ]
 
     logging.info("--> Iniciando fila de impressão automática.")
+
     for nome_arq in arquivos_para_imprimir:
         caminho_completo = os.path.join(caminho_tmp, nome_arq)
         if os.path.exists(caminho_completo):
