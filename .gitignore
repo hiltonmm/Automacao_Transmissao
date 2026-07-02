@@ -12,3 +12,7 @@ tmp/
 # Cache do Python
 __pycache__/
 *.pyc
+
+# Pasta de configurações do PyCharm
+.idea/
+*.iml
