@@ -1,7 +1,14 @@
+# Ambientes virtuais
 .venv/
+venv/
+
+# Logs e temporários
+logs/
+tmp/
+
+# Arquivos sensíveis
+.env
+
+# Cache do Python
 __pycache__/
 *.pyc
-tmp/
-.idea/
-.env
-/mapear.py
