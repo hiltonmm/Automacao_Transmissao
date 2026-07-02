@@ -18,7 +18,7 @@ Este é um software de automação de alto desempenho desenvolvido para gerencia
 ├── tmp/
 ├── xsd/
 │   ├── rcpn.xsd           # Xsd de validação do xml de atos do Registro Civil das Pessoas Naturais 
-│   └── rit.py             # Xsd de validação do xml de atos de Interdições e Tutelas
+│   └── rit.xsd             # Xsd de validação do xml de atos de Interdições e Tutelas
 ├── modulos/
 │   ├── iniciar.py         # Orquestração de login e ambiente
 │   ├── relatorios.py      # Extração automatizada via interface
